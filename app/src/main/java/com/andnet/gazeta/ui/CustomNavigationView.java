@@ -1033,20 +1033,17 @@ public class CustomNavigationView extends BottomNavigationView{
                 new int[]{-android.R.attr.state_checked},
 
         };
+
         int[] textColors = new int[]{
 
-                Theme.bottom_nav_selected_item_text_color,
-                Theme.bottom_nav_item_text_color,
+                Theme.bottom_nav_item_selected_color,
+                Theme.bottom_nav_item_color,
         };
 
-        int[] iconcolors = new int[]{
 
-               Theme.bottom_nav_icon_selected_color,
-               Theme.bottom_nav_icon_color
-        };
 
         ColorStateList textColorStateList=new ColorStateList(states,textColors);
-        ColorStateList iconColorStateList=new ColorStateList(states,iconcolors);
+        ColorStateList iconColorStateList=new ColorStateList(states,textColors);
 
         for(BottomNavigationItemView bottomNavigationItemView:bottomNavigationItemViews){
             bottomNavigationItemView.setTextColor(textColorStateList);
