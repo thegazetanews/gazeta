@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    tools:context=".Activityies.MainActivity">
+
+    <!--<com.google.android.gms.ads.AdView-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/adView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--ads:adSize="BANNER"-->
+        <!--ads:adUnitId="ca-app-pub-7266190432496470/4742989248">-->
+    <!--</com.google.android.gms.ads.AdView>-->
+
+
+</FrameLayout>

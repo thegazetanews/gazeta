@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#D50000</color>
+    <color name="colorPrimaryDark">#D50000</color>
+    <color name="windowBackground">#ebebeb</color>
+    <color name="cardsBackground">#ffffff</color>
+    <color name="colorAccent">#D50000</color>
+
+    <color name="white">#ffffff</color>
+    <color name="pure_black">#000000</color>
+    <color name="black">#70000000</color>
+    <color name="tranparent">#00ffffff</color>
+
+
+    <color name="colorBottomNavigationPrimary">#3F51B5</color>
+    <color name="colorBottomNavigationPrimaryDark">#303F9F</color>
+    <color name="colorBottomNavigationAccent">#FF4081</color>
+    <color name="colorBottomNavigationInactive">#747474</color>
+    <color name="colorBottomNavigationDisable">#3A000000</color>
+    <color name="colorBottomNavigationActiveColored">#FFFFFF</color>
+    <color name="colorBottomNavigationInactiveColored">#50FFFFFF</color>
+    <color name="colorBottomNavigationSelectedBackground">#17000000</color>
+    <color name="colorBottomNavigationNotification">#F63D2B</color>
+
+    <color name="backgroundSelector">#20ffffff</color>
+    <color name="checkColor">#0288D1</color>
+
+
+
+</resources>

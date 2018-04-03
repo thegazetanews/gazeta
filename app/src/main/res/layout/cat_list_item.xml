@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:padding="12dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:tint="@color/white"
+            android:background="@drawable/circle"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/image"
+            android:padding="16dp"
+            android:layout_margin="8dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/image"
+            android:textColor="@color/pure_black"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:text="BBC Amharic"
+            android:layout_margin="8dp"
+            android:id="@+id/name"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <com.andnet.gazeta.ui.Componenet.SmoothCheckBox
+        android:clickable="false"
+        android:elevation="4dp"
+        android:layout_gravity="center|end"
+        android:layout_margin="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/check"
+        android:layout_width="20dp"
+        android:layout_height="20dp"/>
+
+</FrameLayout>

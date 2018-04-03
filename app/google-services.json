@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "298889774138",
+    "firebase_url": "https://gazeta-bb838.firebaseio.com",
+    "project_id": "gazeta-bb838",
+    "storage_bucket": "gazeta-bb838.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298889774138:android:1ee9f8241b2f4a63",
+        "android_client_info": {
+          "package_name": "gazeta.news.gazeta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298889774138-033rqdc5693ni9akvsb99ejfr3fnqdvp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDPQFHaB59sxijzMCCI4RPwLKzGU0iR_o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298889774138:android:643ef988535cb1e3",
+        "android_client_info": {
+          "package_name": "com.etiopian.currency.et"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298889774138-033rqdc5693ni9akvsb99ejfr3fnqdvp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDPQFHaB59sxijzMCCI4RPwLKzGU0iR_o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

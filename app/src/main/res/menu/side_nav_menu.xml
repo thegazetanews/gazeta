@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <group android:id="@+id/group1">
+             <item android:title="General Setting"
+                   android:checkable="false">
+                     <menu>
+                          <item
+                              android:id="@+id/setting_category"
+                              android:icon="@drawable/ic_catagory"
+                              android:title="Choose Category"/>
+                          <item
+                              android:id="@+id/setting_source"
+                              android:icon="@drawable/ic_source"
+                              android:title="Choose Source"/>
+
+                         <item
+                             android:id="@+id/setting_open_news_in_browser"
+                             android:icon="@drawable/ic_world"
+                             android:title="Open news on browser"
+                             app:actionLayout="@layout/switch_layout"
+                             />
+
+                         <item
+                             android:id="@+id/nav_item1"
+                             android:icon="@drawable/ic_image"
+                             android:title="Image Loading"
+                             app:actionLayout="@layout/switch_layout"
+                             />
+                         <item
+                             android:id="@+id/setting_theme"
+                             android:icon="@drawable/ic_color"
+                             android:title="Theme"/>
+
+                         <item
+                             android:id="@+id/setting_dark_theme"
+                             android:icon="@drawable/ic_dark_theme"
+                             android:title="Dark Theme"
+                             app:actionLayout="@layout/switch_layout"
+                             />
+
+                         <item
+                             android:id="@+id/setting_font"
+                             android:icon="@drawable/ic_font"
+                             android:title="Font"
+                             />
+
+                     </menu>
+             </item>
+
+
+        </group>
+
+    <group android:id="@+id/group2">
+        <item android:title="Notification"
+            android:checkable="false">
+            <menu>
+                <item
+                    android:id="@+id/setting_notification"
+                    android:icon="@drawable/ic_notifications"
+                    android:title="Notification"
+                    app:actionLayout="@layout/switch_layout"
+                    />
+
+                <item
+                    android:id="@+id/setting_notification_ringtone"
+                    android:icon="@drawable/ic_sound"
+                    android:title="Ringtone"/>
+
+
+            </menu>
+        </item>
+
+
+    </group>
+
+    <group android:id="@+id/group3">
+        <item android:title="Language"
+            android:checkable="false">
+            <menu>
+                <item
+                    android:id="@+id/setting_app_language"
+                    android:icon="@drawable/ic_app_lang"
+                    android:title="App Language"/>
+                <item
+                    android:id="@+id/setting_content_language"
+                    android:icon="@drawable/ic_language"
+                    android:title="Content Language"/>
+
+
+            </menu>
+        </item>
+    </group>
+
+
+</menu>

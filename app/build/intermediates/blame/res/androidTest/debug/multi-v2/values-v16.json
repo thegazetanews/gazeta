@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/developer/Downloads/Gazeta/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/bbff79c7cfc415d5b812fcbca2568275/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}

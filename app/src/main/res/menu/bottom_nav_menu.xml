@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_nav_home"
+        android:icon="@drawable/in_news"
+        android:title="@string/for_you" />
+
+    <item
+        android:id="@+id/bottom_nav_my_news"
+        android:icon="@drawable/ic_source"
+        android:title="@string/my_news" />
+
+    <item
+        android:id="@+id/bottom_nav_love"
+        android:icon="@drawable/ic_love"
+        android:title="@string/fav" />
+
+    <item
+        android:id="@+id/bottom_nav_read_later"
+        android:icon="@drawable/ic_bookmark_black"
+        android:title="@string/bookmark" />
+
+</menu>
+

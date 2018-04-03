@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:id="@+id/startDec"
+            android:textColor="@color/pure_black"
+            android:text="@string/pick_some_sources_you_like"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:visibility="invisible"
+            android:paddingEnd="16dp"
+            android:paddingLeft="16dp"
+            android:layout_below="@+id/startDec"
+            android:layout_above="@+id/next"
+            android:scrollbars="none"
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp" />
+
+    <TextView
+        android:layout_margin="8dp"
+        android:background="@drawable/background_line_shape"
+        android:textStyle="bold"
+        android:text="NEXT"
+        android:textColor="@color/pure_black"
+        android:gravity="center"
+        android:padding="16dp"
+        android:id="@+id/next"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+        <FrameLayout
+            android:id="@+id/progressFrame"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+               <com.andnet.gazeta.ui.RadialProgressView
+                   android:layout_gravity="center"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+        </FrameLayout>
+
+
+</RelativeLayout>

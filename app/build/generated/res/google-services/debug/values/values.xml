@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">298889774138-033rqdc5693ni9akvsb99ejfr3fnqdvp.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://gazeta-bb838.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">298889774138</string>
+    <string name="google_api_key" translatable="false">AIzaSyCDPQFHaB59sxijzMCCI4RPwLKzGU0iR_o</string>
+    <string name="google_app_id" translatable="false">1:298889774138:android:1ee9f8241b2f4a63</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCDPQFHaB59sxijzMCCI4RPwLKzGU0iR_o</string>
+    <string name="google_storage_bucket" translatable="false">gazeta-bb838.appspot.com</string>
+    <string name="project_id" translatable="false">gazeta-bb838</string>
+</resources>

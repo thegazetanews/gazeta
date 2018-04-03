@@ -1,0 +1,55 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/developer/Downloads/Gazeta/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/design-27.1.0.aar/479e852b7b0c82f8f3882dedc21ba608/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "232"
+                    },
+                    "to": {
+                        "startLines": "12",
+                        "startColumns": "4",
+                        "startOffsets": "613",
+                        "endLines": "15",
+                        "endColumns": "12",
+                        "endOffsets": "790"
+                    }
+                },
+                {
+                    "source": "/home/developer/Downloads/Gazeta/app/src/main/res/values-land/dimens.xml",
+                    "from": {
+                        "startLines": "10,11,12,9,3,5",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "233,282,329,187,56,102",
+                        "endColumns": "48,46,47,45,44,49",
+                        "endOffsets": "277,324,372,228,96,147"
+                    },
+                    "to": {
+                        "startLines": "6,7,8,9,10,11",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "328,377,424,472,518,563",
+                        "endColumns": "48,46,47,45,44,49",
+                        "endOffsets": "372,419,467,513,558,608"
+                    }
+                },
+                {
+                    "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                }
+            ]
+        }
+    ]
+}

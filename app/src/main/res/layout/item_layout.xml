@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+         <TextView
+               android:textColor="#000"
+               android:id="@+id/currencyName"
+               android:gravity="center_horizontal|center_vertical"
+               android:text="@string/currency"
+               android:layout_weight="0.3"
+               android:layout_width="0dp"
+               android:layout_height="match_parent" />
+
+        <TextView
+            android:textColor="#904516"
+            android:id="@+id/baughtTextView"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/buy"
+            android:layout_weight="0.35"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:textColor="#745896"
+            android:id="@+id/soldTextView"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/sold"
+            android:layout_weight="0.35"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

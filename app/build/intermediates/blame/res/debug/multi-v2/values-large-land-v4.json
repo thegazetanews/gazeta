@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/developer/Downloads/Gazeta/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-land-v4/values-large-land-v4.xml",
+            "map": [
+                {
+                    "source": "/home/developer/Downloads/Gazeta/app/src/main/res/values-large-land/dimens.xml",
+                    "from": {
+                        "startLines": "10,11,12,9,4,6",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "233,282,329,187,57,103",
+                        "endColumns": "48,46,47,45,44,49",
+                        "endOffsets": "277,324,372,228,97,148"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,104,151,199,245,290",
+                        "endColumns": "48,46,47,45,44,49",
+                        "endOffsets": "99,146,194,240,285,335"
+                    }
+                }
+            ]
+        }
+    ]
+}

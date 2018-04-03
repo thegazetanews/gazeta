@@ -1,0 +1,29 @@
+<resources>
+
+    <declare-styleable name="AHBottomNavigationBehavior_Params">
+        <attr name="tabLayoutId" format="reference" />
+        <attr name="selectedBackgroundVisible" format="boolean" />
+        <attr name="translucentNavigationEnabled" format="boolean" />
+        <attr name="colored" format="boolean" />
+        <attr name="accentColor" format="color" />
+        <attr name="inactiveColor" format="color" />
+        <attr name="disableColor" format="color" />
+        <attr name="coloredActive" format="color" />
+        <attr name="coloredInactive" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SmoothCheckBox">
+        <attr name="duration" format="integer"/>
+        <attr name="stroke_width" format="dimension"/>
+        <attr name="color_tick" format="color"/>
+        <attr name="color_checked" format="color"/>
+        <attr name="color_unchecked" format="color"/>
+        <attr name="color_unchecked_stroke" format="color"/>
+    </declare-styleable>
+
+</resources>

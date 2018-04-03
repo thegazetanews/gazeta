@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+         <PreferenceCategory android:title="@string/general">
+            <SwitchPreference
+                android:key="pref_key_enable_image_loading"
+                android:title="@string/image_loading"
+                android:defaultValue="true"/>
+
+             <ListPreference
+                 android:dependency="pref_key_enable_image_loading"
+                 android:key="pref_key_image_quality"
+                 android:title="@string/high_quality_image"
+                 android:defaultValue="@string/defual_video_loading"
+                 android:dialogTitle="@string/high_quality_image"
+                 android:entries="@array/image_quality_entry"
+                 android:entryValues="@array/image_quality_value"/>
+        </PreferenceCategory>
+
+    <SwitchPreference
+        android:key="pref_key_open_news_in_web_browser"
+        android:title="@string/open_news_in_web_browser"
+        android:defaultValue="false"/>
+
+     <!--app and content language setting configuration-->
+        <PreferenceCategory android:title="@string/lang">
+        <ListPreference
+            android:key="pref_key_app_language"
+            android:title="@string/application_language"
+            android:defaultValue="@string/app_lang_default_value"
+            android:dialogTitle="@string/application_language"
+            android:entries="@array/app_lang_entry"
+            android:entryValues="@array/app_lang_entry_value"/>
+
+        <ListPreference
+            android:key="pref_key_content_language"
+            android:title="@string/content_lang"
+            android:defaultValue="@string/content_lang_defualt_value"
+            android:dialogTitle="@string/content_lang"
+            android:entries="@array/news_content_lang_entry"
+            android:entryValues="@array/news_content_lang_entry_value"/>
+        </PreferenceCategory>
+
+    <!--Notification configuration-->
+       <PreferenceCategory android:title="@string/notification">
+
+        <SwitchPreference
+            android:key="pref_key_enable_notification"
+            android:title="@string/notification"
+            android:defaultValue="true"/>
+
+        <RingtonePreference
+            android:key="pref_key_ringtone"
+            android:dependency="pref_key_enable_notification"
+            android:title="@string/ringtone"
+            android:ringtoneType="notification"
+            android:showDefault="true"/>
+
+       </PreferenceCategory>
+
+    <!--about the app and other things-->
+    <PreferenceCategory android:title="@string/customer_care">
+
+        <PreferenceScreen
+            android:title="@string/about">
+              <intent android:action="com.thegazeta.news.AboutActivity"/>
+            </PreferenceScreen>
+
+        <Preference
+            android:key="pref_key_send_feedback"
+            android:title="@string/send_feedback"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:minHeight="38dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:visibility="gone"
+            android:src="@drawable/ic_entertianment"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.andnet.gazeta.ui.Componenet.CustomCheckBox
+            android:padding="16dp"
+            android:id="@+id/check"
+            android:text="@string/entertianment"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/image"
+            android:layout_toLeftOf="@id/order"
+            android:layout_gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:src="@drawable/ic_drag"
+            android:layout_centerVertical="true"
+            android:id="@+id/order"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center_vertical"
+            android:padding="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+

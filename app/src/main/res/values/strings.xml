@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">Gazeta</string>
+    <string name="home">News</string>
+    <string name="bookmark">Read Later</string>
+    <string name="my_news">Libraries</string>
+
+    <!--category list-->
+    <string name="top_stories">Top Stories</string>
+    <string name="technology">Technology</string>
+    <string name="world">World</string>
+    <string name="business">Business</string>
+    <string name="politics">Politics</string>
+    <string name="sport">Sport</string>
+    <string name="videos">Video</string>
+
+    <!--used for main setting-->
+    <string name="setting">Settings</string>
+    <string name="text_size">Text Size</string>
+    <string name="send_feedback">Send Feedback</string>
+
+    <!--values for the theme chooser-->
+
+    <!--other string value-->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+
+    <!--string resource for preference-->
+    <string name="general">General</string>
+    <string name="open_news_in_web_browser">Open News In Web Browser</string>
+    <string name="lang">Language</string>
+    <string name="application_language">Application Language</string>
+    <string name="app_lang_default_value" translatable="false">en</string>
+    <string name="lang_en">English</string>
+    <string name="lang_am">Amharic</string>
+    <string name="lang_ti">Tigrinya</string>
+    <string name="lang_or">Afan Oromo</string>
+    <string name="content_lang">Content Language</string>
+    <string name="content_lang_defualt_value" translatable="false">am</string>
+    <string name="ringtone">Ringtone</string>
+    <string name="image_loading">Image Loading</string>
+    <string name="notification">Notification</string>
+    <string name="about">About</string>
+    <string name="customer_care">Help and Feedback</string>
+
+    <string name="source_image_view" translatable="false">source image view</string>
+    <string name="share">Share</string>
+    <string name="clear_all">Clear All</string>
+    <string name="succ_delete_all_news_msg">Successfully deleted all offline News</string>
+    <string name="no_article_saved">No Article Saved</string>
+    <string name="added_to_read_later">Added To Read Later</string>
+    <string name="removed_from_read_later">Removed from Read Later</string>
+
+    <string name="go_to_orginal_website">View original web page</string>
+    <string name="no_connation">No internet connection</string>
+
+    <string name="medium">Medium</string>
+    <string name="small">Small</string>
+    <string name="large">Large</string>
+    <string name="extra_large">Extra Large</string>
+
+    <string name="tiny">Tiny</string>
+    <string name="rate">Rate</string>
+    <string name="currency">Currency</string>
+    <string name="buy">Bought</string>
+    <string name="sold">Sold</string>
+    <string name="coud_not_comm">Could not communicate with the server! Check  your internet connection</string>
+    <string name="refresh">Refresh</string>
+    <string name="defual_video_loading" translatable="false">only_on_wifi</string>
+    <string name="high_quality_image">High Quality Image</string>
+    <string name="no_news_in_this_catagory">Oops… We don\'t have news in this category yet!</string>
+    <string name="art_and_culture">Art and Culture</string>
+    <string name="health">Health</string>
+    <string name="social">Social</string>
+    <string name="audio">Audio</string>
+    <string name="entertianment">Entertainment</string>
+    <string name="for_you">For You</string>
+    <string name="fav">Favorite</string>
+    <string name="done">Done</string>
+    <string name="choose_source">Choose Source</string>
+    <string name="choose_catagory">Choose Category</string>
+    <string name="loading">Loading...</string>
+    <string name="pick_some_sources_you_like">Pick some sources you may like</string>
+
+</resources>
