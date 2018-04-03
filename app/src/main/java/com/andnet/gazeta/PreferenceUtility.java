@@ -28,9 +28,14 @@ public class PreferenceUtility {
     public static final String key_tab_item_display="key_tab_item_display";
     public static final String key_tab_item_gravity="key_tab_item_gravity";
     public static final String key_tab_item_mode="key_tab_item_mode";
+
     public static  String tab_item_display="title";/*title,icon,both*/
     public static  String tab_item_gravity="center";/*center,fill*/
     public static String  tab_item_mode="scrollable";/*scrollable,fixed*/
+
+    //theme
+    public static final String key_app_theme="key_app_theme";
+    public static  String app_theme="default";/*default,dark*/
 
 
 
@@ -39,7 +44,7 @@ public class PreferenceUtility {
         tab_item_display=sharedPreferences.getString(key_tab_item_display,tab_item_display);
         tab_item_gravity=sharedPreferences.getString(key_tab_item_gravity,tab_item_gravity);
         tab_item_mode=sharedPreferences.getString(key_tab_item_mode,tab_item_mode);
-
+        app_theme=sharedPreferences.getString(key_app_theme,app_theme);
 
         sharedPreferences.registerOnSharedPreferenceChangeListener((sharedPreferences1, key) -> {
             if(key.equals(key_tab_item_display) || key.equals(key_tab_item_gravity) || key.equals(key_tab_item_mode)){
@@ -85,6 +90,15 @@ public class PreferenceUtility {
         SharedPreferences sharedPreferences=MainApplication.applicationContext.getSharedPreferences(mainConfig, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor=sharedPreferences.edit();
         editor.putString(key_tab_item_display,display).apply();
+    }
+    public static String getAppTheme(){
+        return MainApplication.applicationContext.getSharedPreferences(mainConfig, Context.MODE_PRIVATE).getString(key_app_theme,app_theme);
+    }
+
+    public static void setAppTheme(String theme){
+        SharedPreferences sharedPreferences=MainApplication.applicationContext.getSharedPreferences(mainConfig, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.putString(key_app_theme,theme).commit();
     }
 
 

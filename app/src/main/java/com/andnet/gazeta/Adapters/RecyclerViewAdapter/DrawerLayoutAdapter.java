@@ -3,6 +3,7 @@ package com.andnet.gazeta.Adapters.RecyclerViewAdapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 import android.os.Build;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.andnet.gazeta.PreferenceUtility;
 import com.andnet.gazeta.R;
 import com.andnet.gazeta.ui.Componenet.CustomSwitch;
 import com.andnet.gazeta.ui.Divider;
@@ -42,6 +44,7 @@ public class DrawerLayoutAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     public DrawerLayoutAdapter(Context context){
        this.context=context;
        onDrawerItemClickListner=(OnDrawerItemClickListner)context;
+       settingItemList.clear();
        init();
     }
 
@@ -101,9 +104,13 @@ public class DrawerLayoutAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int i) {
         switch (getItemViewType(i)){
             case divider:
+                SideMenuItemDivider sideMenuItemDivider=(SideMenuItemDivider)holder;
+                sideMenuItemDivider.updateTheme();
                 break;
             case header:
-                ((SideMenuItemHeader)holder).textView.setText(settingItemList.get(i).title);
+                SideMenuItemHeader sideMenuItemHeader=((SideMenuItemHeader) holder);
+                sideMenuItemHeader.updateTheme();
+                sideMenuItemHeader.textView.setText(settingItemList.get(i).title);
                 break;
             case menu_item:
                 SideMenuItem sideMenuItem=(SideMenuItem)holder;
@@ -114,6 +121,7 @@ public class DrawerLayoutAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                     sideMenuItem.icon.getDrawable().setColorFilter(Theme.side_nav_item_icon_color, PorterDuff.Mode.SRC_IN);
                 }
                 sideMenuItem.title.setText(settingItemList.get(i).title);
+                sideMenuItem.updateTheme();
                 break;
             case menu_item_switch:
                 SideMenuItemSwitch sideMenuItemSwitch=(SideMenuItemSwitch)holder;
@@ -124,15 +132,22 @@ public class DrawerLayoutAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                 }else {
                     sideMenuItemSwitch.icon.getDrawable().setColorFilter(Theme.side_nav_item_icon_color, PorterDuff.Mode.SRC_IN);
                 }
-//                if(settingItemList.get(i).id==22){
-//                    sideMenuItemSwitch.customSwitch.setChecked(PreferenceUtility.isTabIconEnabled());
-//                }
-//                sideMenuItemSwitch.customSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-//                    SettingItem item=settingItemList.get(i);
-//                    if(item!=null){
-//                        onDrawerItemClickListner.onItemClicked(item.id,isChecked);
-//                    }
-//                });
+
+                if(settingItemList.get(i).id==6){
+                    if("Dark".equals(PreferenceUtility.getAppTheme())){
+                        sideMenuItemSwitch.customSwitch.setChecked(true);
+                    }else if("default".equals(PreferenceUtility.getAppTheme())){
+                        sideMenuItemSwitch.customSwitch.setChecked(false);
+                    }
+                }
+
+                sideMenuItemSwitch.customSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                    SettingItem item=settingItemList.get(i);
+                    if(item!=null && item.id==6){
+                        onDrawerItemClickListner.onItemClicked(6,isChecked);
+                    }
+                });
+                sideMenuItemSwitch.updateTheme();
                 break;
             case space:
                 break;
@@ -182,6 +197,10 @@ public class DrawerLayoutAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                 }
             });
         }
+
+        public void updateTheme(){
+            title.setTextColor(Theme.side_nav_item_text_color);
+        }
     }
 
     public class SideMenuItemSwitch extends RecyclerView.ViewHolder{
@@ -195,6 +214,23 @@ public class DrawerLayoutAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             customSwitch=itemView.findViewById(R.id.sideswitch);
 
         }
+
+        public void updateTheme(){
+            customSwitch.setTextColor(ColorStateList.valueOf(Theme.side_nav_item_text_color));
+            int[][] states = new int[][]{
+                    new int[]{android.R.attr.state_checked},
+                    new int[]{-android.R.attr.state_checked},
+            };
+            int[] colors = new int[]{
+
+                    Theme.side_nav_switch_enabled_color,
+                    Theme.side_nav_switch_disable_color
+            };
+            ColorStateList colorStateList = new ColorStateList(states, colors);
+            customSwitch.setThumbTintList(colorStateList);
+
+
+        }
     }
 
     public class SideMenuItemHeader extends RecyclerView.ViewHolder{
@@ -203,8 +239,10 @@ public class DrawerLayoutAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             super(itemView);
             textView=(TextView)itemView;
             textView.setTextColor(Theme.side_nav_item_header_text_color);
+        }
 
-
+        public void updateTheme(){
+            textView.setTextColor(Theme.side_nav_item_header_text_color);
         }
     }
 
@@ -216,8 +254,15 @@ public class DrawerLayoutAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     }
 
     public class SideMenuItemDivider extends RecyclerView.ViewHolder{
+
+        Divider divider;
         public SideMenuItemDivider(View itemView) {
             super(itemView);
+            divider=(Divider)itemView;
+        }
+
+        public void updateTheme(){
+            divider.updatePaintColor();
         }
     }
 

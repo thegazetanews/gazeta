@@ -10,7 +10,7 @@ import com.andnet.gazeta.MainApplication;
 public class Theme {
 
       //bottom nav
-      public static final String key_bottom_nav_background="key_bottom_nav_background";
+      public static final String key_bottom_nav_background="key_bottom_nav_background_color";
       public static final String key_bottom_nav_item_color="key_bottom_nav_item_color";
       public static final String key_bottom_nav_item_selected_color="key_bottom_nav_item_selected_color";
 
@@ -70,12 +70,10 @@ public class Theme {
 
     public static void updateAppTheme(){
             SharedPreferences sharedPreferences=MainApplication.applicationContext.getSharedPreferences("theme", Context.MODE_PRIVATE);
-
             //bottom nav init
             bottom_nav_background_color=sharedPreferences.getInt(key_bottom_nav_background,bottom_nav_background_color);
             bottom_nav_item_color=sharedPreferences.getInt(key_bottom_nav_item_color,bottom_nav_item_color);
             bottom_nav_item_selected_color=sharedPreferences.getInt(key_bottom_nav_item_selected_color,bottom_nav_item_selected_color);
-
 
             toolbar_background_color=sharedPreferences.getInt(key_toolbar_background_color,toolbar_background_color);
             progress_view_circle=sharedPreferences.getInt(key_progress_circle,progress_view_circle);
@@ -103,7 +101,6 @@ public class Theme {
           editor.putInt(key_bottom_nav_background,bottom_nav_background_color);
           editor.putInt(key_bottom_nav_item_color,bottom_nav_item_color);
           editor.putInt(key_bottom_nav_item_selected_color,bottom_nav_item_selected_color);
-
 
 
           editor.putInt(key_toolbar_background_color,toolbar_background_color);

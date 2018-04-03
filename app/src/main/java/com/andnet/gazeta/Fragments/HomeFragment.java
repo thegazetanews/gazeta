@@ -98,11 +98,13 @@ public class HomeFragment extends Fragment{
     public void realodTabItems(){
         if(tabLayout==null)return;
         if(homeFragmentPagerAdapter==null)return;
+        if(toolbar==null)return;
         updateTheme();
     }
 
 
     public void updateTheme(){
+        toolbar.updateTheme();
         tabLayout.setSelectedTabIndicatorColor(Theme.tab_indictor_color);
         tabLayout.setTabTextColors( Theme.tab_layout_item_text_color,  Theme.tab_layout_item_selected_text_color);
         tabLayout.setBackgroundColor(Theme.toolbar_background_color);

@@ -5,12 +5,10 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
@@ -58,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayoutAdapt
     private RecyclerView sideNavview;
     private FrameLayout frameLayout;
     private CustomNavigationView bottomNavigation;
+    private  DrawerLayoutAdapter adapter;
 
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -65,43 +64,16 @@ public class MainActivity extends AppCompatActivity implements DrawerLayoutAdapt
         PreferenceUtility.loadDefulatSettings();
         setContentView(R.layout.activity_main);
         init();
-         updateTheme();
         placeFragment();
         LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver, new IntentFilter("something_on_tab_has_changed"));
     }
 
     @SuppressLint("RestrictedApi")
-    public void updateTheme(){
-        bottomNavigation.setBackgroundColor(Theme.bottom_nav_background_color);
-        BottomNavigationItemView[] bottomNavigationItemViews=bottomNavigation.getBottomNavigationItemViews();
-        int[][] states = new int[][]{
-                new int[]{android.R.attr.state_checked},
-                new int[]{-android.R.attr.state_checked},
-
-        };
-
-        int[] textColors = new int[]{
-
-                Theme.bottom_nav_item_selected_color,
-                Theme.bottom_nav_item_color,
-        };
-
-        ColorStateList textColorStateList=new ColorStateList(states,textColors);
-        ColorStateList iconColorStateList=new ColorStateList(states,textColors);
-
-        for(BottomNavigationItemView bottomNavigationItemView:bottomNavigationItemViews){
-            bottomNavigationItemView.setTextColor(textColorStateList);
-            bottomNavigationItemView.setIconTintList(iconColorStateList);
-            bottomNavigationItemView.setItemBackground(R.color.tranparent);
-        }
-    }
 
 
     private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            FileLog.write("on Recive otuside called");
-
             if(getSupportFragmentManager().findFragmentById(baseContentId) instanceof HomeFragment){
                 homeFragment=(HomeFragment)getSupportFragmentManager().findFragmentById(baseContentId);
                 homeFragment.realodTabItems();
@@ -118,8 +90,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayoutAdapt
     }
 
 
-
-
     private void init() {
         frameLayout = findViewById(baseContentId);
         sideNavview = findViewById(R.id.siderv);
@@ -134,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayoutAdapt
         sideNavview.setBackgroundColor(Theme.side_nav_background_color);
 
         sideNavview.setLayoutManager(new LinearLayoutManager(this));
-        DrawerLayoutAdapter adapter=new DrawerLayoutAdapter(this);
+        adapter=new DrawerLayoutAdapter(this);
         sideNavview.setAdapter(adapter);
     }
 
@@ -240,9 +210,9 @@ public class MainActivity extends AppCompatActivity implements DrawerLayoutAdapt
     @Override
     public void onItemClicked(int id, boolean on) {
         if(id==2){
-            CategoryChooserBottomSheet categoryChooserBottomSheet=new CategoryChooserBottomSheet();
-            categoryChooserBottomSheet.show(getSupportFragmentManager(),categoryChooserBottomSheet.getTag());
-            drawerLayout.closeDrawer(Gravity.START);
+               CategoryChooserBottomSheet categoryChooserBottomSheet=new CategoryChooserBottomSheet();
+               categoryChooserBottomSheet.show(getSupportFragmentManager(),categoryChooserBottomSheet.getTag());
+               drawerLayout.closeDrawer(Gravity.START);
         }else if(id==22){
                 TabControlBottomSheet categoryChooserBottomSheet=new TabControlBottomSheet();
                 categoryChooserBottomSheet.show(getSupportFragmentManager(),categoryChooserBottomSheet.getTag());
@@ -251,21 +221,36 @@ public class MainActivity extends AppCompatActivity implements DrawerLayoutAdapt
                 SourceDialogFragment sourceDialogFragment=new SourceDialogFragment();
                 sourceDialogFragment.show(getSupportFragmentManager(),sourceDialogFragment.getTag());
                 drawerLayout.closeDrawer(Gravity.START);
-        }else if(id==5){
-            FileLog.write("6 is pressed");
-            processTheme();
-            drawerLayout.closeDrawer(Gravity.START);
+        }else if(id==6){
+            if(on){
+                processTheme("Dark");
+                PreferenceUtility.setAppTheme("Dark");
+            }else{
+                processTheme("default");
+                PreferenceUtility.setAppTheme("default");
+
+            }
+            if(getSupportFragmentManager().findFragmentById(baseContentId) instanceof HomeFragment){
+                if(homeFragment!=null && bottomNavigation!=null && sideNavview!=null && adapter!=null){
+                    Theme.updateAppTheme();
+                    homeFragment.realodTabItems();
+                    bottomNavigation.updateTheme();
+                    sideNavview.setBackgroundColor(Theme.side_nav_background_color);
+                    if(!sideNavview.isComputingLayout())
+                       adapter.notifyDataSetChanged();
+                }
+            }
+
+
         }
-
-
      }
 
 
-    private void processTheme() {
+    private void processTheme(String name) {
         BufferedReader reader = null;
         try {
             reader = new BufferedReader(
-                    new InputStreamReader(getAssets().open("Dark.theme")));
+                    new InputStreamReader(getAssets().open( name+ ".theme")));
             String mLine;
             while ((mLine = reader.readLine()) != null) {
                 String[] val=mLine.trim().split("=");

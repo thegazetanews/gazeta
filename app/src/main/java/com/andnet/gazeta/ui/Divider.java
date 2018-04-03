@@ -19,6 +19,13 @@ public class Divider extends View {
 
     Paint paint=new Paint(Paint.ANTI_ALIAS_FLAG);
 
+
+    public void updatePaintColor(){
+        paint.setColor(Theme.side_nav_item_divider);
+        invalidate();
+
+    }
+
     public Divider(Context context) {
         super(context);
         paint.setColor(Theme.side_nav_item_divider);
