@@ -1352,4 +1352,75 @@ public class GazetaDao_Impl implements GazetaDao {
       _statement.release();
     }
   }
+
+  @Override
+  public List<Source> getSource(String name) {
+    final String _sql = "SELECT * FROM source WHERE name = ?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    if (name == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, name);
+    }
+    final Cursor _cursor = __db.query(_statement);
+    try {
+      final int _cursorIndexOfRowid = _cursor.getColumnIndexOrThrow("rowid");
+      final int _cursorIndexOfName = _cursor.getColumnIndexOrThrow("name");
+      final int _cursorIndexOfLink = _cursor.getColumnIndexOrThrow("link");
+      final int _cursorIndexOfLogo = _cursor.getColumnIndexOrThrow("logo");
+      final int _cursorIndexOfImage = _cursor.getColumnIndexOrThrow("image");
+      final int _cursorIndexOfAllowed = _cursor.getColumnIndexOrThrow("allowed");
+      final int _cursorIndexOfEnabled = _cursor.getColumnIndexOrThrow("enabled");
+      final int _cursorIndexOfVisibility = _cursor.getColumnIndexOrThrow("visibility");
+      final int _cursorIndexOfPri = _cursor.getColumnIndexOrThrow("pri");
+      final List<Source> _result = new ArrayList<Source>(_cursor.getCount());
+      while(_cursor.moveToNext()) {
+        final Source _item;
+        _item = new Source();
+        final Long _tmpRowid;
+        if (_cursor.isNull(_cursorIndexOfRowid)) {
+          _tmpRowid = null;
+        } else {
+          _tmpRowid = _cursor.getLong(_cursorIndexOfRowid);
+        }
+        _item.setRowid(_tmpRowid);
+        final String _tmpName;
+        _tmpName = _cursor.getString(_cursorIndexOfName);
+        _item.setName(_tmpName);
+        final String _tmpLink;
+        _tmpLink = _cursor.getString(_cursorIndexOfLink);
+        _item.setLink(_tmpLink);
+        final String _tmpLogo;
+        _tmpLogo = _cursor.getString(_cursorIndexOfLogo);
+        _item.setLogo(_tmpLogo);
+        final String _tmpImage;
+        _tmpImage = _cursor.getString(_cursorIndexOfImage);
+        _item.setImage(_tmpImage);
+        final boolean _tmpAllowed;
+        final int _tmp;
+        _tmp = _cursor.getInt(_cursorIndexOfAllowed);
+        _tmpAllowed = _tmp != 0;
+        _item.setAllowed(_tmpAllowed);
+        final boolean _tmpEnabled;
+        final int _tmp_1;
+        _tmp_1 = _cursor.getInt(_cursorIndexOfEnabled);
+        _tmpEnabled = _tmp_1 != 0;
+        _item.setEnabled(_tmpEnabled);
+        final boolean _tmpVisibility;
+        final int _tmp_2;
+        _tmp_2 = _cursor.getInt(_cursorIndexOfVisibility);
+        _tmpVisibility = _tmp_2 != 0;
+        _item.setVisibility(_tmpVisibility);
+        final int _tmpPri;
+        _tmpPri = _cursor.getInt(_cursorIndexOfPri);
+        _item.setPri(_tmpPri);
+        _result.add(_item);
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
 }

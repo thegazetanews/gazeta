@@ -3,7 +3,6 @@ package com.andnet.gazeta.Activityies;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
@@ -15,8 +14,8 @@ import com.andnet.gazeta.Adapters.ViewPagerAdapters.NewsDetialFragmentPagerAdapt
 import com.andnet.gazeta.Databases.GazetaDatabase;
 import com.andnet.gazeta.Helper.ChromeBrowser;
 import com.andnet.gazeta.Helper.Constants;
-import com.andnet.gazeta.Models.News;
 import com.andnet.gazeta.Helper.HalfSlidePageTransformer;
+import com.andnet.gazeta.Models.News;
 import com.andnet.gazeta.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

@@ -9,6 +9,7 @@
 package com.andnet.gazeta.ui;
 
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
 import android.graphics.PixelFormat;
@@ -31,7 +32,7 @@ public class MenuDrawable extends Drawable {
 
     public MenuDrawable() {
         super();
-        paint.setColor(Theme.toolbar_title_text_color);
+        paint.setColor(Color.parseColor("#ffffff"));
         paint.setStrokeWidth(AndroidUtilities.dp(2));
     }
 

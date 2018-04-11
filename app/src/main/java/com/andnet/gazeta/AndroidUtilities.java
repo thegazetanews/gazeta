@@ -77,6 +77,17 @@ public class AndroidUtilities {
         }
     }
 
+    public static void showKeyBoared(View view) {
+        if (view == null) {
+            return;
+        }
+        try {
+            InputMethodManager imm = (InputMethodManager) view.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(view, 1);
+        } catch (Exception e) {
+        }
+    }
+
     public static int[] fromStringToArray(String str){
        String[] val=str.replace("[","").replace("]","").split(",");
        int[] i=new int[val.length];

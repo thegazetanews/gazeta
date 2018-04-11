@@ -1,8 +1,13 @@
 package com.andnet.gazeta.Fragments;
 
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
-import android.graphics.Typeface;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,13 +18,17 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.EditText;
 
 import com.andnet.gazeta.Activityies.MainActivity;
+import com.andnet.gazeta.AndroidUtilities;
 import com.andnet.gazeta.Databases.GazetaDatabase;
 import com.andnet.gazeta.Models.Category;
 import com.andnet.gazeta.PreferenceUtility;
@@ -27,17 +36,19 @@ import com.andnet.gazeta.R;
 import com.andnet.gazeta.ui.CustomTabLayout;
 import com.andnet.gazeta.ui.CustomToolbar;
 import com.andnet.gazeta.ui.MenuDrawable;
-import com.andnet.gazeta.ui.Theme;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class HomeFragment extends Fragment{
+
     private ViewPager viewPager;
     private CustomTabLayout tabLayout;
     private CustomToolbar toolbar;
     private View mainView;
+    private EditText searchEditText;
+    private RecyclerView searchRv;
     private AppBarLayout appBarLayout;
 
     private HomeFragmentPagerAdapter homeFragmentPagerAdapter;
@@ -47,52 +58,118 @@ public class HomeFragment extends Fragment{
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mainView = inflater.inflate(R.layout.home_fragment, container, false);
         init();
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-            @Override
-            public void onPageSelected(int position) {
-
-            }
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
         return mainView;
     }
 
     private void init(){
         appBarLayout=mainView.findViewById(R.id.appBar);
+        if(PreferenceUtility.getAppTheme().equals("dark"))
+            PreferenceUtility.setAppMainThemeColor(0xff212121);
+        appBarLayout.setBackgroundColor(PreferenceUtility.getMainAppThemeColor());
         viewPager =  mainView.findViewById(R.id.viewpager);
         tabLayout= mainView.findViewById(R.id.tabLayout);
         toolbar= mainView.findViewById(R.id.toolbar);
+        searchEditText=mainView.findViewById(R.id.searchEdiText);
+        searchRv=mainView.findViewById(R.id.searchRv);
         toolbar.inflateMenu(R.menu.main_menu);
-        toolbar.updateTheme();
         menuDrawable=new MenuDrawable();
         toolbar.setNavigationIcon(menuDrawable);
+        toolbar.setTitleTextColor(Color.WHITE);
+        tabLayout.updateTheme();
+
+        toolbar.setOnMenuItemClickListener(item -> {
+            searchEditText.setVisibility(View.VISIBLE);
+            menuDrawable.setRotation(1f,true);
+            toolbar.getMenu().getItem(0).setVisible(false);
+            searchEditText.requestFocus();
+            showSearchView(true);
+            AndroidUtilities.showKeyBoared(searchEditText);
+            search=true;
+            return false;
+        });
+
         toolbar.setNavigationOnClickListener(v -> {
-            if(!search){
-                if(getActivity() instanceof  MainActivity){
-                    MainActivity mainActivity=(MainActivity)getActivity();
-                    DrawerLayout drawerLayout=mainActivity.getDrawerLayout();
-                    if(drawerLayout.isDrawerOpen(Gravity.START)){
-                        drawerLayout.closeDrawer(Gravity.START);
-                    }else {
-                        drawerLayout.openDrawer(Gravity.START);
-                    }
+            if(search){
+                searchEditText.setVisibility(View.GONE);
+                menuDrawable.setRotation(0f,true);
+                toolbar.getMenu().getItem(0).setVisible(true);
+                search=false;
+                showSearchView(false);
+                AndroidUtilities.hideKeyboard(searchEditText);
+            }else{
+                MainActivity mainActivity=(MainActivity)getActivity();
+                DrawerLayout drawerLayout=mainActivity.getDrawerLayout();
+                if(drawerLayout.isDrawerOpen(Gravity.START)){
+                    drawerLayout.closeDrawer(Gravity.START);
+                }else {
+                    drawerLayout.openDrawer(Gravity.START);
                 }
-            }else {
             }
         });
 
         homeFragmentPagerAdapter=new HomeFragmentPagerAdapter(getChildFragmentManager(),getActivity());
-        ((TextView)mainView.findViewById(R.id.gazetaTextView)).setTypeface(Typeface.createFromAsset(getResources().getAssets(),"geez.ttf"));
         viewPager.setAdapter(homeFragmentPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
         realodTabItems();
+    }
+
+    private void showSearchView(boolean b) {
+
+        if(b){
+            viewPager.animate()
+                    .alpha(0f)
+                    .setDuration(300)
+                    .setListener(new AnimatorListenerAdapter() {
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            viewPager.setVisibility(View.GONE);
+                        }
+                    });
+            tabLayout.animate()
+                    .alpha(0f)
+                    .setDuration(300)
+                    .setListener(new AnimatorListenerAdapter() {
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            tabLayout.setVisibility(View.GONE);
+                        }
+                    });
+            searchRv.setAlpha(0f);
+            searchRv.setVisibility(View.VISIBLE);
+            searchRv.animate()
+                    .alpha(1f)
+                    .setDuration(300)
+                    .setListener(null);
+
+        }else {
+
+            searchRv.animate()
+                    .alpha(0f)
+                    .setDuration(300)
+                    .setListener(new AnimatorListenerAdapter() {
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            searchRv.setVisibility(View.GONE);
+                        }
+                    });
+
+            tabLayout.setAlpha(0f);
+            tabLayout.setVisibility(View.VISIBLE);
+            tabLayout.animate()
+                    .alpha(1f)
+                    .setDuration(300)
+                    .setListener(null);
+
+            viewPager.setAlpha(0f);
+            viewPager.setVisibility(View.VISIBLE);
+            viewPager.animate()
+                    .alpha(1f)
+                    .setDuration(300)
+                    .setListener(null);
+
+
+        }
+
     }
 
     public void realodTabItems(){
@@ -102,13 +179,15 @@ public class HomeFragment extends Fragment{
         updateTheme();
     }
 
+    public void updateThemeColor(){
+        if(appBarLayout!=null){
+            if(PreferenceUtility.getAppTheme().equals("dark"))
+                PreferenceUtility.setAppMainThemeColor(0xff212121);
+            appBarLayout.setBackgroundColor(PreferenceUtility.getMainAppThemeColor());
+        }
+    }
 
     public void updateTheme(){
-        toolbar.updateTheme();
-        tabLayout.setSelectedTabIndicatorColor(Theme.tab_indictor_color);
-        tabLayout.setTabTextColors( Theme.tab_layout_item_text_color,  Theme.tab_layout_item_selected_text_color);
-        tabLayout.setBackgroundColor(Theme.toolbar_background_color);
-
         switch (PreferenceUtility.getTabGravity()){
             case "center":
                 tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
@@ -163,6 +242,20 @@ public class HomeFragment extends Fragment{
         }
     }
 
+    public void backPressed() {
+        if(search){
+            searchEditText.setVisibility(View.GONE);
+            menuDrawable.setRotation(0f,true);
+            toolbar.getMenu().getItem(0).setVisible(true);
+            search=false;
+            showSearchView(false);
+            AndroidUtilities.hideKeyboard(searchEditText);
+        }
+    }
+
+     public boolean isSearch() {
+        return search;
+     }
 
     public class HomeFragmentPagerAdapter extends FragmentStatePagerAdapter {
 

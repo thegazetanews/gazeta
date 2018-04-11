@@ -5,7 +5,7 @@
     <string name="my_news">Libraries</string>
 
     <!--category list-->
-    <string name="top_stories">Top Stories</string>
+    <string name="top_stories">Headlines</string>
     <string name="technology">Technology</string>
     <string name="world">World</string>
     <string name="business">Business</string>
@@ -54,12 +54,7 @@
     <string name="go_to_orginal_website">View original web page</string>
     <string name="no_connation">No internet connection</string>
 
-    <string name="medium">Medium</string>
-    <string name="small">Small</string>
-    <string name="large">Large</string>
-    <string name="extra_large">Extra Large</string>
 
-    <string name="tiny">Tiny</string>
     <string name="rate">Rate</string>
     <string name="currency">Currency</string>
     <string name="buy">Bought</string>
@@ -81,5 +76,12 @@
     <string name="choose_catagory">Choose Category</string>
     <string name="loading">Loading...</string>
     <string name="pick_some_sources_you_like">Pick some sources you may like</string>
+    <string name="layout_mode">Layout Mode</string>
+    <string name="choose_color">Choose Color</string>
+    <string name="medium">Medium</string>
+    <string name="extra_large">Extra Large</string>
+    <string name="large">Large</string>
+    <string name="tiny">Tiny</string>
+    <string name="small">Small</string>
 
 </resources>

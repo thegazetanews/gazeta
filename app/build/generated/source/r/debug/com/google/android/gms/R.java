@@ -10,18 +10,18 @@ public final class R {
     public static final class id {
         public static final int auto = 0x7f090025;
         public static final int center = 0x7f09003f;
-        public static final int none = 0x7f0900a9;
-        public static final int normal = 0x7f0900aa;
-        public static final int radio = 0x7f0900bc;
-        public static final int text = 0x7f09010e;
-        public static final int text2 = 0x7f09010f;
-        public static final int toolbar = 0x7f09011e;
-        public static final int wrap_content = 0x7f090134;
+        public static final int none = 0x7f0900ac;
+        public static final int normal = 0x7f0900ad;
+        public static final int radio = 0x7f0900bf;
+        public static final int text = 0x7f090118;
+        public static final int text2 = 0x7f090119;
+        public static final int toolbar = 0x7f09012a;
+        public static final int wrap_content = 0x7f090140;
     }
     public static final class integer {
         public static final int google_play_services_version = 0x7f0a0007;
     }
     public static final class string {
-        public static final int common_google_play_services_unknown_issue = 0x7f0e002e;
+        public static final int common_google_play_services_unknown_issue = 0x7f0e002f;
     }
 }

@@ -4,6 +4,7 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.PorterDuff
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
@@ -17,6 +18,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.andnet.gazeta.Activityies.SplashScreen.FIRST_TIME_PREF_FILE_NAME
+import com.andnet.gazeta.Activityies.SplashScreen.FIRST_TIME_PREF_KEY
 import com.andnet.gazeta.Databases.GazetaDatabase
 import com.andnet.gazeta.Helper.GridItemDecoration
 import com.andnet.gazeta.Helper.MaterialColorPalette
@@ -109,6 +112,7 @@ class SourceCatChooser:AppCompatActivity() {
         }
 
             val intent = Intent(this, MainActivity::class.java)
+            getSharedPreferences(FIRST_TIME_PREF_FILE_NAME, Context.MODE_PRIVATE).edit().putBoolean(FIRST_TIME_PREF_KEY, false).apply()
             startActivity(intent)
             finish()
     }

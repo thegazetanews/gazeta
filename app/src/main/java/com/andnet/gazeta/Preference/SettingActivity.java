@@ -8,7 +8,6 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.andnet.gazeta.Activityies.AboutActivity;
 import com.andnet.gazeta.Helper.LocaleHelper;
 import com.andnet.gazeta.R;
 
@@ -62,8 +61,8 @@ public class SettingActivity extends AppCompatActivity implements SharedPreferen
             LocaleHelper.setLocale(this,sharedPreferences.getString("pref_key_app_language","en"));
             recreate();
         }else if("pref_key_about".equals(s)){
-            Intent intent=new Intent(SettingActivity.this,AboutActivity.class);
-            startActivity(intent);
+//            Intent intent=new Intent(SettingActivity.this,AboutActivity.class);
+//            startActivity(intent);
         }
 
     }

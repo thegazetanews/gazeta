@@ -19,7 +19,7 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 
 import com.andnet.gazeta.AndroidUtilities;
-
+import com.andnet.gazeta.PreferenceUtility;
 
 
 public class RadialProgressView extends View {
@@ -43,7 +43,7 @@ public class RadialProgressView extends View {
     public RadialProgressView(Context context) {
         super(context);
         size = AndroidUtilities.dp(40);
-        progressColor =Theme.progress_view_circle;
+        progressColor = PreferenceUtility.getMainAppThemeColor();
         decelerateInterpolator = new DecelerateInterpolator();
         accelerateInterpolator = new AccelerateInterpolator();
         progressPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -57,7 +57,7 @@ public class RadialProgressView extends View {
         super(context, attrs);
         size = AndroidUtilities.dp(40);
 
-        progressColor =Theme.progress_view_circle;
+        progressColor = PreferenceUtility.getMainAppThemeColor();
         decelerateInterpolator = new DecelerateInterpolator();
         accelerateInterpolator = new AccelerateInterpolator();
         progressPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -108,6 +108,7 @@ public class RadialProgressView extends View {
         progressColor = color;
         progressPaint.setColor(progressColor);
     }
+
 
     @Override
     protected void onDraw(Canvas canvas) {

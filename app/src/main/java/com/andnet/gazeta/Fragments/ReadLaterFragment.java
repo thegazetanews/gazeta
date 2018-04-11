@@ -62,7 +62,6 @@ public class ReadLaterFragment extends Fragment{
         Drawable menuDrawable=new MenuDrawable();
         toolbar.setNavigationIcon(menuDrawable);
         toolbar.setTitle(getString(R.string.bookmark));
-        toolbar.updateTheme();
         appBarLayout=mainView.findViewById(R.id.appbar);
         appBarLayout.addOnOffsetChangedListener((appBarLayout, verticalOffset) -> ViewCompat.setElevation(appBarLayout, 4));
         int orientation=getResources().getConfiguration().orientation;

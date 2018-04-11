@@ -1,0 +1,79 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_layout_coordinate"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:background="@color/tranparent"
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.andnet.gazeta.ui.CustomToolbar
+            app:title="@string/fav"
+            android:theme="@style/MyToolBarTheme"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <EditText
+                android:visibility="gone"
+                android:gravity="left|center_vertical"
+                android:inputType="textMultiLine|textCapSentences"
+                android:padding="8dp"
+                android:maxLines="1"
+                android:background="@null"
+                android:hint="Search"
+                android:textSize="16sp"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:id="@+id/searchEdiText"
+                android:textCursorDrawable="@drawable/drop_shadow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.andnet.gazeta.ui.CustomToolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.andnet.gazeta.ui.RadialProgressView
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:background="@drawable/drop_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:visibility="invisible"
+            android:id="@+id/sourceRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <android.support.v7.widget.RecyclerView
+            android:visibility="invisible"
+            android:id="@+id/searchRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

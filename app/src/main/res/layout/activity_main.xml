@@ -6,14 +6,13 @@
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <FrameLayout
             android:paddingBottom="?attr/actionBarSize"
             android:id="@+id/content"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
         <View
@@ -21,7 +20,7 @@
             android:layout_marginBottom="?attr/actionBarSize"
             android:layout_gravity="bottom"
             android:layout_width="match_parent"
-            android:layout_height="3dp"/>
+            android:layout_height="8dp"/>
 
          <com.andnet.gazeta.ui.CustomNavigationView
              app:menu="@menu/bottom_nav_menu"
@@ -31,11 +30,11 @@
              android:layout_gravity="bottom"/>
        </FrameLayout>
 
-
-      <android.support.v7.widget.RecyclerView
-             android:id="@+id/siderv"
+       <android.support.design.widget.NavigationView
+           app:menu="@menu/side_nav_menu"
+             android:id="@+id/sideNav"
              android:layout_gravity="start"
-             android:layout_width="@dimen/drawer_width_max"
+             android:layout_width="wrap_content"
              android:layout_height="match_parent"/>
 
 </android.support.v4.widget.DrawerLayout>

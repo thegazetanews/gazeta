@@ -3,6 +3,7 @@ package com.andnet.gazeta.ui.Dialogs;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.graphics.Color;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,11 @@ public class TabControlBottomSheet extends BottomSheetDialogFragment{
     public void setupDialog(Dialog dialog, int style) {
         super.setupDialog(dialog, style);
         View view= LayoutInflater.from(getContext()).inflate(R.layout.tab_layout_setting,null);
+
+        if(PreferenceUtility.getAppTheme().equals("dark")){
+            view.setBackgroundColor(Color.parseColor("#212121"));
+        }
+
         RadioGroup tabDisplayRadioGroup=view.findViewById(R.id.tabDisplayRadioGroup);
         RadioGroup tabModeRadioGroup=view.findViewById(R.id.tabModeRadioGroup);
         RadioGroup tabGravityRadioGroup=view.findViewById(R.id.tabGravityRadioGroup);

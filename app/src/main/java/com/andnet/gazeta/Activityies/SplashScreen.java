@@ -21,9 +21,6 @@ public class SplashScreen extends AppCompatActivity {
         firsTime=firtTimePref.getBoolean(FIRST_TIME_PREF_KEY,firsTime);
         if(firsTime){
             startActivity(new Intent(this,SourceCatChooser.class));
-            firtTimePref.edit().putBoolean(FIRST_TIME_PREF_KEY,false).apply();
-            finish();
-
         }else{
             start();
         }

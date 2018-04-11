@@ -1,6 +1,7 @@
 package com.andnet.gazeta.ui;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.util.AttributeSet;
 
@@ -14,18 +15,20 @@ import java.util.List;
 public class CustomTabLayout extends TabLayout {
     public CustomTabLayout(Context context) {
         super(context);
-        updateTheme();
+//        updateTheme();
     }
 
     public CustomTabLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
-        updateTheme();
+//        updateTheme();
     }
 
+
+
     public void updateTheme(){
-        setSelectedTabIndicatorColor(Theme.tab_indictor_color);
-        setTabTextColors( Theme.tab_layout_item_text_color,  Theme.tab_layout_item_selected_text_color);
-        setBackgroundColor(Theme.toolbar_background_color);
+        setSelectedTabIndicatorColor(Color.WHITE);
+        setTabTextColors(Color.parseColor("#80ffffff"), Color.WHITE);
+
 
         switch (PreferenceUtility.getTabGravity()){
             case "center":

@@ -36,8 +36,8 @@ public class PreferenceUtility {
     //theme
     public static final String key_app_theme="key_app_theme";
     public static  String app_theme="default";/*default,dark*/
-
-
+    public static String key_app_main_theme_color="key_app_main_theme_color";
+    public static int appMainThemeColor=0xFF0288D1;
 
     public static void loadDefulatSettings(){
         SharedPreferences sharedPreferences=MainApplication.applicationContext.getSharedPreferences(mainConfig, Context.MODE_PRIVATE);
@@ -45,6 +45,7 @@ public class PreferenceUtility {
         tab_item_gravity=sharedPreferences.getString(key_tab_item_gravity,tab_item_gravity);
         tab_item_mode=sharedPreferences.getString(key_tab_item_mode,tab_item_mode);
         app_theme=sharedPreferences.getString(key_app_theme,app_theme);
+        appMainThemeColor=sharedPreferences.getInt(key_app_main_theme_color,appMainThemeColor);
 
         sharedPreferences.registerOnSharedPreferenceChangeListener((sharedPreferences1, key) -> {
             if(key.equals(key_tab_item_display) || key.equals(key_tab_item_gravity) || key.equals(key_tab_item_mode)){
@@ -56,14 +57,6 @@ public class PreferenceUtility {
 
     }
 
-//    public static void saveDefualtSettings() {
-//        SharedPreferences sharedPreferences=MainApplication.applicationContext.getSharedPreferences(mainConfig, Context.MODE_PRIVATE);
-//        SharedPreferences.Editor editor=sharedPreferences.edit();
-//        editor.putString(key_tab_item_display,tab_item_display).apply();
-//        editor.putString(key_tab_item_gravity,key_tab_item_gravity).apply();
-//        editor.putString(key_tab_item_mode,tab_item_mode).apply();
-//
-//    }
 
     //tab setter and getter from shared pref file
     public static String getTabGravity(){
@@ -100,6 +93,16 @@ public class PreferenceUtility {
         SharedPreferences.Editor editor=sharedPreferences.edit();
         editor.putString(key_app_theme,theme).commit();
     }
+
+
+    public static int getMainAppThemeColor(){
+        return MainApplication.applicationContext.getSharedPreferences(mainConfig, Context.MODE_PRIVATE).getInt(key_app_main_theme_color,appMainThemeColor);
+    }
+
+    public static void setAppMainThemeColor(int color){
+        SharedPreferences sharedPreferences=MainApplication.applicationContext.getSharedPreferences(mainConfig, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.putInt(key_app_main_theme_color,color).apply();    }
 
 
 

@@ -16,11 +16,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.andnet.gazeta.Adapters.RecyclerViewAdapter.NewsListRecycleViewAdapter;
 import com.andnet.gazeta.Databases.GazetaDatabase;
+import com.andnet.gazeta.FileLog;
 import com.andnet.gazeta.Helper.Constants;
 import com.andnet.gazeta.Helper.EndlessRecyclerViewScrollListener;
 import com.andnet.gazeta.Helper.NoAnimationItemAnimator;
@@ -62,8 +65,10 @@ public class HomeListFragment extends Fragment {
     private int pageSize=2;
     private int trackPos=0;
     private  ArrayList<String> keyList=new ArrayList<>();
-    private List<Object> newsList = new ArrayList<>();
-    private RelativeLayout no_offline_news_layout;
+
+    private RelativeLayout infoLayout;
+    private ImageView infoImageImageView;
+    private TextView infoTextView;
 
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -89,7 +94,11 @@ public class HomeListFragment extends Fragment {
         mainView = inflater.inflate(R.layout.home_list_fragment, container, false);
         progressLayout=mainView.findViewById(R.id.progressLayout);
         recyclerView = mainView.findViewById(R.id.rv);
-        no_offline_news_layout=mainView.findViewById(R.id.no_offline_news_layout);
+
+        infoLayout=mainView.findViewById(R.id.infoView);
+        infoImageImageView=mainView.findViewById(R.id.info_image_view);
+        infoTextView=mainView.findViewById(R.id.infoTextView);
+
         progressLayout=mainView.findViewById(R.id.progressLayout);
         swipeRefreshLayout=mainView.findViewById(R.id.swipeToRefresh);
         swipeRefreshLayout.setOnRefreshListener(this::refreshRec);
@@ -143,11 +152,13 @@ public class HomeListFragment extends Fragment {
                         }});}}}
 
     private void reference(){
-
         DatabaseReference databaseReference=firebaseDatabase.getReference(Constants.ETHIOPIA).child(content_lang).child(pageTitle);
-        Query news_query=databaseReference.orderByValue().limitToLast(MAX_CATCH_KEY);
+        Query news_query=databaseReference.orderByValue().limitToLast(10);
         createValueEventListener(news_query);
     }
+
+
+
 
     private void createValueEventListener(Query query){
         query.addValueEventListener(new ValueEventListener() {
@@ -155,7 +166,7 @@ public class HomeListFragment extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if(!dataSnapshot.exists()){
                     if(swipeRefreshLayout.isRefreshing())swipeRefreshLayout.setRefreshing(false);
-                    shoNoNewsFound();
+                    setInfo(R.drawable.in_news,getString(R.string.no_news_in_this_catagory),true);
                     return;
                 }
                 keyList.clear();
@@ -164,7 +175,6 @@ public class HomeListFragment extends Fragment {
                     keyList.add(keySnapShot.getKey());
                 }
                 Collections.reverse(keyList);
-//                writeKeyToDatabase(keyList.get(0));
                 getNews();
             }
             @Override
@@ -174,23 +184,31 @@ public class HomeListFragment extends Fragment {
         });
     }
 
-    private void shoNoNewsFound() {
 
-        progressLayout.animate()
-                .alpha(0f)
-                .setDuration(300)
-                .setListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        progressLayout.setVisibility(View.GONE);
-                    }
-                });
-        no_offline_news_layout.setAlpha(0f);
-        no_offline_news_layout.setVisibility(View.VISIBLE);
-        no_offline_news_layout.animate()
-                .alpha(1f)
-                .setDuration(300)
-                .setListener(null);
+    private void setInfo(int res,String info,boolean needImage){
+        if(progressLayout.getVisibility()==View.VISIBLE){
+            progressLayout.animate()
+                    .alpha(0f)
+                    .setDuration(300)
+                    .setListener(new AnimatorListenerAdapter() {
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            progressLayout.setVisibility(View.GONE);
+                        }
+                    });
+        }
+        if(infoLayout.getVisibility()!=View.VISIBLE){
+            infoLayout.setAlpha(0f);
+            infoLayout.setVisibility(View.VISIBLE);
+            infoLayout.animate()
+                    .alpha(1f)
+                    .setDuration(300)
+                    .setListener(null);
+        }
+        if(needImage) {
+            infoImageImageView.setImageResource(res);
+        }
+        infoTextView.setText(info);
     }
 
 
@@ -207,6 +225,35 @@ public class HomeListFragment extends Fragment {
         }
         startPos=pageSize;
         pageSize+=2;
+    }
+
+
+    private boolean isSourceAllowed(String source){
+        List<Source> sourceList=GazetaDatabase.getDatabase(getContext()).dao().getSource(source);
+        if(sourceList!=null && !source.isEmpty()){
+           return  sourceList.get(0).isVisibility();
+        }
+        return false;
+    }
+
+
+    private void getSource(String key){
+        DatabaseReference databaseReference=firebaseDatabase.getReference(Constants.ETHIOPIA).child("newsL").child(key).child("source");
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    FileLog.write(dataSnapshot.getValue().toString());
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
     }
 
 
@@ -231,6 +278,8 @@ public class HomeListFragment extends Fragment {
                         newsModel.setSourceLogo(source.getLogo());
                         newsModel.setSourceName(source.getName());
                         newsModel.setAllowedSource(source.isAllowed());
+
+
 
                         newsListRecycleViewAdapter.removeProgress();
                         newsListRecycleViewAdapter.add(newsModel);

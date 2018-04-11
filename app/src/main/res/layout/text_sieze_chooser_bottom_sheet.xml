@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/textSizeRadioGroup"
+    android:showDividers="end"
+    android:layout_height="match_parent">
+
+
+    <com.andnet.gazeta.ui.Componenet.CustomRadioButton
+        android:id="@+id/tinyTextSize"
+        android:text="@string/tiny"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.andnet.gazeta.ui.Componenet.CustomRadioButton
+        android:id="@+id/smallTextSize"
+        android:text="@string/small"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.andnet.gazeta.ui.Componenet.CustomRadioButton
+        android:checked="true"
+        android:id="@+id/mediumTextSize"
+        android:text="@string/medium"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.andnet.gazeta.ui.Componenet.CustomRadioButton
+        android:id="@+id/largeTextSize"
+        android:text="@string/large"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.andnet.gazeta.ui.Componenet.CustomRadioButton
+        android:id="@+id/extraLargeTextSize"
+        android:text="@string/extra_large"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RadioGroup>

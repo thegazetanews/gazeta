@@ -27,7 +27,7 @@ public class CustomSideNavView extends NavigationView {
     }
 
     public void updateTheme(){
-        setBackgroundColor(Theme.side_nav_background_color);
+//        setBackgroundColor(Theme.side_nav_background_color);
 
 //        int[][] states = new int[][]{
 //                new int[]{android.R.attr.state_checked},
@@ -39,8 +39,8 @@ public class CustomSideNavView extends NavigationView {
 //                getResources().getColor(R.color.black)
 //        };
 //        ColorStateList colorStateList = new ColorStateList(states, colors);
-        setItemTextColor(ColorStateList.valueOf(Theme.side_nav_item_text_color));
-        setItemIconTintList(ColorStateList.valueOf(Theme.side_nav_item_icon_color));
+//        setItemTextColor(ColorStateList.valueOf(Theme.side_nav_item_text_color));
+//        setItemIconTintList(ColorStateList.valueOf(Theme.side_nav_item_icon_color));
 
 
         Menu menu=getMenu();

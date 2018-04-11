@@ -8,7 +8,6 @@
     android:layout_marginLeft="@dimen/card_margin_left"
     android:layout_marginBottom="@dimen/card_margin_bottom"
     android:layout_marginRight="@dimen/card_margin_right"
-    app:cardBackgroundColor="#ffffff"
     app:contentPadding="-2dp">
 
     <TextView
@@ -51,7 +50,6 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="16dp"
-            android:textColor="#000000"
             android:textSize="14sp"
             android:textStyle="bold" />
 

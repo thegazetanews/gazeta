@@ -14,7 +14,6 @@ import com.andnet.gazeta.Models.Header;
 import com.andnet.gazeta.Models.Source;
 import com.andnet.gazeta.R;
 import com.andnet.gazeta.ui.Componenet.SmoothCheckBox;
-import com.andnet.gazeta.ui.Theme;
 import com.facebook.drawee.generic.RoundingParams;
 import com.facebook.drawee.view.SimpleDraweeView;
 
@@ -99,7 +98,7 @@ public class CatSourceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             sourceviewholder.image.setImageURI(source.getImage());
             sourceviewholder.name.setText(source.getName());
             RoundingParams roundingParams = RoundingParams.fromCornersRadius(5f);
-            roundingParams.setBorder(Theme.avatar_enale_color, 3.0f);
+//            roundingParams.setBorder(Theme.state_enabled_color, 3.0f);
             roundingParams.setRoundAsCircle(true);
             sourceviewholder.image.getHierarchy().setRoundingParams(roundingParams);
 

@@ -15,20 +15,13 @@ import android.view.View;
 
 import com.andnet.gazeta.AndroidUtilities;
 
-public class Divider extends View {
+public class Divider extends View implements ThemeInterface{
 
     Paint paint=new Paint(Paint.ANTI_ALIAS_FLAG);
 
-
-    public void updatePaintColor(){
-        paint.setColor(Theme.side_nav_item_divider);
-        invalidate();
-
-    }
-
     public Divider(Context context) {
         super(context);
-        paint.setColor(Theme.side_nav_item_divider);
+//        paint.setColor(Theme.divider_color);
     }
 
     @Override
@@ -41,4 +34,8 @@ public class Divider extends View {
         canvas.drawLine(getPaddingLeft(), AndroidUtilities.dp(8), getWidth() - getPaddingRight(), AndroidUtilities.dp(8), paint);
     }
 
+    @Override
+    public void updateTheme() {
+        invalidate();
+    }
 }

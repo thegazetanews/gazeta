@@ -19,13 +19,11 @@ public class FavoriteFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
        View mainView = inflater.inflate(R.layout.read_later_fragment, container, false);
-       CustomToolbar toolbar=mainView.findViewById(R.id.toolbar);
+        CustomToolbar toolbar=mainView.findViewById(R.id.toolbar);
         toolbar.inflateMenu(R.menu.main_menu);
-        toolbar.setTitle(getString(R.string.bookmark));
+        toolbar.setTitle(getString(R.string.fav));
         Drawable menuDrawable=new MenuDrawable();
         toolbar.setNavigationIcon(menuDrawable);
-        toolbar.setTitle(getString(R.string.bookmark));
-        toolbar.updateTheme();
         return mainView;
     }
 

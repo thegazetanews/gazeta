@@ -58,6 +58,10 @@ public interface GazetaDao{
     List<Category> getAllVisibleCategories();
 
 
+    @Query("SELECT * FROM source WHERE name = :name")
+    List<Source> getSource(String name);
+
+
     @Update
     void updateSource(Source source);
 

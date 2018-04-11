@@ -24,12 +24,12 @@
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_light.png"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/color_abc_btn_colored_text_material.xml.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/color/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_light.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_select_dialog_singlechoice_material.xml.flat",
@@ -116,16 +116,16 @@
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_rate.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_share.png.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_share.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-mdpi-v4/abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_share.png.flat",
-        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_share.png"
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_back.xml.flat",
@@ -164,6 +164,10 @@
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_world.png"
     },
     {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable_voa.png.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/drawable/voa.png"
+    },
+    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-ldrtl-hdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
     },
@@ -176,24 +180,24 @@
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xxhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_light.png"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_catagory.png.flat",
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-ldpi/ic_catagory.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_light.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/color-v23_abc_tint_switch_track.xml.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/color-v23/abc_tint_switch_track.xml"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_dark_theme.png.flat",
-        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_dark_theme.png"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable_notification_icon_background.xml.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/bbff79c7cfc415d5b812fcbca2568275/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_dark_theme.png.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_dark_theme.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
@@ -216,24 +220,24 @@
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-v23_abc_control_background_material.xml.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-v23/abc_control_background_material.xml"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-v23_abc_control_background_material.xml.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-v23/abc_control_background_material.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_no_sved_news.png.flat",
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_no_sved_news.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable_tooltip_frame_light.xml.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable/tooltip_frame_light.xml"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable_tooltip_frame_light.xml.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable/tooltip_frame_light.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable_design_snackbar_background.xml.flat",
@@ -284,32 +288,32 @@
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-ldpi/ic_curency.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_bookmark.png.flat",
-        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-ldpi/ic_bookmark.png"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xhdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_catagory.png.flat",
-        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_catagory.png"
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_bookmark.png.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-ldpi/ic_bookmark.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_sound.png.flat",
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_sound.png"
     },
     {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_catagory.png.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_catagory.png"
+    },
+    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_notification_template_big_media_narrow_custom.xml.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/fcad58a5fdc629f750acc9ce15357100/res/layout/notification_template_big_media_narrow_custom.xml"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_no_sved_news.png.flat",
-        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-hdpi/ic_no_sved_news.png"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_design_text_input_password_icon.xml.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/design-27.1.0.aar/479e852b7b0c82f8f3882dedc21ba608/res/layout/design_text_input_password_icon.xml"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_no_sved_news.png.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-hdpi/ic_no_sved_news.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable_design_password_eye.xml.flat",
@@ -364,24 +368,24 @@
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/fcad58a5fdc629f750acc9ce15357100/res/layout/notification_template_media_custom.xml"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_refresh.png.flat",
-        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-hdpi/ic_refresh.png"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_curency.png.flat",
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_curency.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_no_sved_news.png.flat",
-        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_no_sved_news.png"
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_refresh.png.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-hdpi/ic_refresh.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_holo_dark.xml.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable/abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png"
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_no_sved_news.png.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_no_sved_news.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable_bottom_drop_shaddow.xml.flat",
@@ -480,12 +484,12 @@
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-ldpi/ic_cat_side.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/color_abc_primary_text_disable_only_material_light.xml.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/color/abc_primary_text_disable_only_material_light.xml"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-ldrtl-mdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/color_abc_primary_text_disable_only_material_light.xml.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/color/abc_primary_text_disable_only_material_light.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
@@ -528,12 +532,12 @@
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/bbff79c7cfc415d5b812fcbca2568275/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_abc_dialog_title_material.xml.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/layout/abc_dialog_title_material.xml"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_abc_dialog_title_material.xml.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/layout/abc_dialog_title_material.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_clear.png.flat",
@@ -604,12 +608,12 @@
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xxhdpi-v4/abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_settings.png.flat",
@@ -728,28 +732,32 @@
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable/abc_ratingbar_material.xml"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_art_culuture.png.flat",
-        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_art_culuture.png"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_item_layout.xml.flat",
         "source": "/home/developer/Downloads/Gazeta/app/src/main/res/layout/item_layout.xml"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_art_culuture.png.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_art_culuture.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable_abc_btn_borderless_material.xml.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable/abc_btn_borderless_material.xml"
     },
     {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_fragment_library.xml.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/layout/fragment_library.xml"
+    },
+    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_abc_popup_menu_item_layout.xml.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_light.png"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_font.png.flat",
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_font.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_light.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_notifications.png.flat",
@@ -784,6 +792,10 @@
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
     {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_view_mode_one.xml.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/layout/view_mode_one.xml"
+    },
+    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_16dp.png.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png"
     },
@@ -804,16 +816,16 @@
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_font.xml"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_audio.png.flat",
-        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_audio.png"
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_top_stories.png.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-ldpi/ic_top_stories.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/color_abc_background_cache_hint_selector_material_light.xml.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/color/abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_top_stories.png.flat",
-        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-ldpi/ic_top_stories.png"
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_audio.png.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_audio.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable_abc_textfield_search_material.xml.flat",
@@ -828,12 +840,12 @@
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_image.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_36dp.png"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_dark_theme.png.flat",
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-ldpi/ic_dark_theme.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable_abc_spinner_textfield_background_material.xml.flat",
@@ -888,6 +900,10 @@
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_rate.png"
     },
     {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_color_picker_layout.xml.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/layout/color_picker_layout.xml"
+    },
+    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_bookmark_outline_white.png.flat",
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-ldpi/ic_bookmark_outline_white.png"
     },
@@ -902,6 +918,10 @@
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-mdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_them_info_item.xml.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/layout/them_info_item.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_no_sved_news.png.flat",
@@ -976,16 +996,20 @@
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_sound.xml"
     },
     {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_color_item_layout.xml.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/layout/color_item_layout.xml"
+    },
+    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/color_abc_search_url_text.xml.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/color/abc_search_url_text.xml"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_sound.png.flat",
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_sound.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/color_abc_search_url_text.xml.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/color/abc_search_url_text.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_business.png.flat",
@@ -1020,12 +1044,16 @@
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_video.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/color_design_error.xml.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/design-27.1.0.aar/479e852b7b0c82f8f3882dedc21ba608/res/color/design_error.xml"
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_article_view_mode.xml.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/layout/article_view_mode.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/color_design_error.xml.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/design-27.1.0.aar/479e852b7b0c82f8f3882dedc21ba608/res/color/design_error.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/anim_abc_slide_in_top.xml.flat",
@@ -1088,12 +1116,12 @@
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/bbff79c7cfc415d5b812fcbca2568275/res/layout-v21/notification_action_tombstone.xml"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/color-v23_abc_btn_colored_text_material.xml.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/color-v23/abc_btn_colored_text_material.xml"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/color_abc_btn_colored_borderless_text_material.xml.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/color/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/color-v23_abc_btn_colored_text_material.xml.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/color-v23/abc_btn_colored_text_material.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/color_abc_primary_text_disable_only_material_dark.xml.flat",
@@ -1188,16 +1216,16 @@
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_abc_activity_chooser_view.xml.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/layout/abc_activity_chooser_view.xml"
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_notification_template_lines_media.xml.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/fcad58a5fdc629f750acc9ce15357100/res/layout/notification_template_lines_media.xml"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_abc_activity_chooser_view.xml.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/layout/abc_activity_chooser_view.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_art_culuture.png.flat",
@@ -1248,12 +1276,12 @@
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-hdpi/ic_bookmark_outline_white.png"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
-        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xhdpi-v4/abc_ic_star_black_36dp.png"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_social.png.flat",
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_social.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
+        "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xhdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/anim_abc_slide_out_top.xml.flat",
@@ -1332,12 +1360,12 @@
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/design-27.1.0.aar/479e852b7b0c82f8f3882dedc21ba608/res/layout/design_navigation_menu.xml"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_color.png.flat",
-        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_color.png"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_color.png.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_color.png"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -1440,12 +1468,12 @@
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_health.xml"
     },
     {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_emety_layout.xml.flat",
-        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/layout/emety_layout.xml"
-    },
-    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_cat_side.png.flat",
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_cat_side.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_emety_layout.xml.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/layout/emety_layout.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
@@ -1494,6 +1522,10 @@
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable_trial.jpeg.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/drawable/trial.jpeg"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_source_round_item.xml.flat",
@@ -1920,6 +1952,10 @@
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_drag.png"
     },
     {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_view_mode_three.xml.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/layout/view_mode_three.xml"
+    },
+    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable_in_news.png.flat",
         "source": "/home/developer/Downloads/Gazeta/app/src/main/res/drawable/in_news.png"
     },
@@ -1930,6 +1966,10 @@
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-mdpi-v4/abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_setting_header_item.xml.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/layout/setting_header_item.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_love.png.flat",
@@ -1958,6 +1998,10 @@
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_social.png.flat",
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_social.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_theme_bottom_sheet_item_view.xml.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/layout/theme_bottom_sheet_item_view.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_settings.png.flat",
@@ -2158,6 +2202,10 @@
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_view_mode.png.flat",
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_view_mode.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_text_sieze_chooser_bottom_sheet.xml.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/layout/text_sieze_chooser_bottom_sheet.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_design_navigation_item_separator.xml.flat",
@@ -2404,6 +2452,10 @@
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_language.png"
     },
     {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_them_bottom_sheet_view.xml.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/layout/them_bottom_sheet_view.xml"
+    },
+    {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/color_abc_tint_btn_checkable.xml.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/color/abc_tint_btn_checkable.xml"
     },
@@ -2414,10 +2466,6 @@
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
         "source": "/home/developer/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.0.aar/0f5a4535e6d733587b76c3711f0f7d00/res/drawable-xxhdpi-v4/abc_text_select_handle_middle_mtrl_light.png"
-    },
-    {
-        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_my_news_layout.xml.flat",
-        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/layout/my_news_layout.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable_line_border.xml.flat",
@@ -2766,6 +2814,10 @@
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_font.png.flat",
         "source": "/home/developer/Downloads/Gazeta/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_font.png"
+    },
+    {
+        "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_view_mode_two.xml.flat",
+        "source": "/home/developer/Downloads/Gazeta/app/src/main/res/layout/view_mode_two.xml"
     },
     {
         "merged": "/home/developer/Downloads/Gazeta/app/build/intermediates/res/merged/debug/layout_notification_template_big_media_custom.xml.flat",

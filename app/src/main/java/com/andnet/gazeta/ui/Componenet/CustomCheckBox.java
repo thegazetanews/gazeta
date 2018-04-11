@@ -11,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.widget.CheckBox;
 
-import com.andnet.gazeta.ui.Theme;
 
 public class CustomCheckBox extends android.support.v7.widget.AppCompatCheckBox{
 
@@ -29,18 +28,14 @@ public class CustomCheckBox extends android.support.v7.widget.AppCompatCheckBox{
 
     @SuppressLint("RestrictedApi")
     public void updateTheme() {
-
-        setTextColor(Theme.side_nav_item_text_color);
-
+//        setTextColor(Theme.side_nav_item_text_color);
         int states[][] = {{android.R.attr.state_checked}, {-android.R.attr.state_checked}};
-        int colors[] = {Theme.side_nav_switch_enabled_color, Theme.side_nav_switch_disable_color};
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            setButtonTintList(new ColorStateList(states,colors));
-        }else {
-            setSupportButtonTintList(new ColorStateList(states,colors));
-
-        }
-
-
-    }}
+//        int colors[] = {Theme.state_enabled_color, Theme.state_disable_color};
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//            setButtonTintList(new ColorStateList(states,colors));
+//        }else {
+//            setSupportButtonTintList(new ColorStateList(states,colors));
+//
+//        }
+    }
+}

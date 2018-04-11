@@ -3,6 +3,7 @@ package com.andnet.gazeta.ui.Dialogs;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v4.content.ContextCompat;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 import com.andnet.gazeta.Databases.GazetaDatabase;
 import com.andnet.gazeta.Helper.GridItemDecoration;
 import com.andnet.gazeta.Models.Source;
+import com.andnet.gazeta.PreferenceUtility;
 import com.andnet.gazeta.R;
 import com.andnet.gazeta.ui.Componenet.SmoothCheckBox;
 import com.facebook.drawee.generic.RoundingParams;
@@ -35,6 +37,9 @@ public class SourceDialogFragment extends BottomSheetDialogFragment{
         super.setupDialog(dialog, style);
          View view= LayoutInflater.from(getContext()).inflate(R.layout.choose_source_layout,null);
          recyclerView=view.findViewById(R.id.rv);
+         if(PreferenceUtility.getAppTheme().equals("dark")){
+             recyclerView.setBackgroundColor(Color.parseColor("#212121"));
+         }
 
          GridLayoutManager grid=new GridLayoutManager(getContext(),3);
          recyclerView.setLayoutManager(grid);

@@ -4,6 +4,7 @@ package com.andnet.gazeta.ui;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
@@ -13,6 +14,7 @@ import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.transition.Transition;
 import android.support.transition.TransitionSet;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.SparseIntArray;
@@ -24,6 +26,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.andnet.gazeta.PreferenceUtility;
 import com.andnet.gazeta.R;
 
 import java.lang.ref.WeakReference;
@@ -1026,25 +1029,24 @@ public class CustomNavigationView extends BottomNavigationView{
     }
     @SuppressLint("RestrictedApi")
     public void updateTheme(){
-        setBackgroundColor(Theme.bottom_nav_background_color);
         BottomNavigationItemView[] bottomNavigationItemViews=getBottomNavigationItemViews();
         int[][] states = new int[][]{
                 new int[]{android.R.attr.state_checked},
                 new int[]{-android.R.attr.state_checked},
-
         };
-
+        int disabledColor;
+        if(PreferenceUtility.getAppTheme().equals("dark")){
+            disabledColor=0xffffffff;
+            PreferenceUtility.setAppMainThemeColor(ContextCompat.getColor(getContext(),R.color.colorAccent));
+        }else{
+            disabledColor=Color.parseColor("#121212");
+        }
         int[] textColors = new int[]{
-
-                Theme.bottom_nav_item_selected_color,
-                Theme.bottom_nav_item_color,
+                PreferenceUtility.getMainAppThemeColor(),
+                disabledColor
         };
-
-
-
         ColorStateList textColorStateList=new ColorStateList(states,textColors);
         ColorStateList iconColorStateList=new ColorStateList(states,textColors);
-
         for(BottomNavigationItemView bottomNavigationItemView:bottomNavigationItemViews){
             bottomNavigationItemView.setTextColor(textColorStateList);
             bottomNavigationItemView.setIconTintList(iconColorStateList);

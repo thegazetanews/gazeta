@@ -1,44 +1,44 @@
 package com.andnet.gazeta.Activityies;
 
-import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SwitchCompat;
 import android.view.Gravity;
+import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
-
-import com.andnet.gazeta.Adapters.RecyclerViewAdapter.DrawerLayoutAdapter;
-import com.andnet.gazeta.FileLog;
 import com.andnet.gazeta.Fragments.FavoriteFragment;
 import com.andnet.gazeta.Fragments.HomeFragment;
 import com.andnet.gazeta.Fragments.LibraryFragment;
 import com.andnet.gazeta.Fragments.ReadLaterFragment;
 import com.andnet.gazeta.PreferenceUtility;
 import com.andnet.gazeta.R;
+import com.andnet.gazeta.ui.Componenet.CustomSwitchCompat;
 import com.andnet.gazeta.ui.CustomNavigationView;
+import com.andnet.gazeta.ui.Dialogs.ArticleViewModeBottomSheetDialog;
 import com.andnet.gazeta.ui.Dialogs.CategoryChooserBottomSheet;
+import com.andnet.gazeta.ui.Dialogs.ColorPickerBottomSheetDialog;
+import com.andnet.gazeta.ui.Dialogs.FontChooserBottomSheetDialog;
 import com.andnet.gazeta.ui.Dialogs.SourceDialogFragment;
 import com.andnet.gazeta.ui.Dialogs.TabControlBottomSheet;
-import com.andnet.gazeta.ui.Theme;
+import com.andnet.gazeta.ui.Dialogs.TextsizeChooserBottomSheetDialog;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class MainActivity extends AppCompatActivity implements DrawerLayoutAdapter.OnDrawerItemClickListner,CategoryChooserBottomSheet.OnTabItemChanged{
+public class MainActivity extends AppCompatActivity implements CategoryChooserBottomSheet.OnTabItemChanged,ColorPickerBottomSheetDialog.OnMainAppThemeChanged{
 
     public static final String HOME_TAG = "home";
     public static final String MY_NEWS_TAG = "my_news_tag";
@@ -53,71 +53,92 @@ public class MainActivity extends AppCompatActivity implements DrawerLayoutAdapt
     private FavoriteFragment favoriteFragment;
 
     private DrawerLayout drawerLayout;
-    private RecyclerView sideNavview;
-    private FrameLayout frameLayout;
+    private NavigationView navigationView;
     private CustomNavigationView bottomNavigation;
-    private  DrawerLayoutAdapter adapter;
-
-
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        PreferenceUtility.loadDefulatSettings();
-        setContentView(R.layout.activity_main);
-        init();
-        placeFragment();
-        LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver, new IntentFilter("something_on_tab_has_changed"));
-    }
-
-    @SuppressLint("RestrictedApi")
-
-
-    private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if(getSupportFragmentManager().findFragmentById(baseContentId) instanceof HomeFragment){
-                homeFragment=(HomeFragment)getSupportFragmentManager().findFragmentById(baseContentId);
-                homeFragment.realodTabItems();
-
-            }
-        }
-
-    };
-
-    @Override
-    protected void onDestroy() {
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(mMessageReceiver);
-        super.onDestroy();
-    }
-
 
     private void init() {
-        frameLayout = findViewById(baseContentId);
-        sideNavview = findViewById(R.id.siderv);
+        navigationView = findViewById(R.id.sideNav);
         drawerLayout = findViewById(R.id.drawer_layout);
         bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.enableAnimation(false);
         bottomNavigation.enableShiftingMode(false);
         bottomNavigation.enableItemShiftingMode(false);
-        bottomNavigation.setItemBackgroundResource(R.drawable.item_background);
         bottomNavigation.setOnNavigationItemSelectedListener(onBottomNavigationItemSelectedListener);
         bottomNavigation.updateTheme();
-        sideNavview.setBackgroundColor(Theme.side_nav_background_color);
+        navigationView.setNavigationItemSelectedListener(navigationItemSelectedListener);
+        Menu menu=navigationView.getMenu();
+        SwitchCompat switchCompat=(SwitchCompat)menu.findItem(R.id.setting_dark_theme).getActionView();
+        if( PreferenceUtility.getAppTheme().equals("dark")){
+            switchCompat.setChecked(true);
+        }else{
+            switchCompat.setChecked(false);
+        }
+        if(PreferenceUtility.getAppTheme().equals("dark")){
+            menu.findItem(R.id.setting_theme).setEnabled(false);
+        }
+    }
 
-        sideNavview.setLayoutManager(new LinearLayoutManager(this));
-        adapter=new DrawerLayoutAdapter(this);
-        sideNavview.setAdapter(adapter);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        if(PreferenceUtility.getAppTheme().equals("dark")){
+            setTheme(R.style.DarkTheme);
+        }else{
+            setTheme(R.style.AppTheme);
+        }
+        super.onCreate(savedInstanceState);
+        PreferenceUtility.loadDefulatSettings();
+        setContentView(R.layout.activity_main);
+        init();
+        placeFragment();
+        LocalBroadcastManager.getInstance(this).registerReceiver(tabChangeReceiver, new IntentFilter("something_on_tab_has_changed"));
+    }
+
+    private BroadcastReceiver tabChangeReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if(getSupportFragmentManager().findFragmentById(baseContentId) instanceof HomeFragment){
+                homeFragment=(HomeFragment)getSupportFragmentManager().findFragmentById(baseContentId);
+                homeFragment.realodTabItems();
+            }
+        }
+
+    };
+
+
+    @Override
+    public void onBackPressed() {
+        if(getSupportFragmentManager().findFragmentById(baseContentId) instanceof HomeFragment){
+            homeFragment=(HomeFragment) getSupportFragmentManager().findFragmentById(baseContentId);
+            if(homeFragment.isSearch()){
+                homeFragment.backPressed();
+                return;
+            }
+        }else if(getSupportFragmentManager().findFragmentById(baseContentId) instanceof LibraryFragment){
+            libraryFragment=(LibraryFragment) getSupportFragmentManager().findFragmentById(baseContentId);
+            if(libraryFragment.isSearch()){
+                libraryFragment.backPressed();
+                return;
+            }
+        }
+        if(getSupportFragmentManager().getFragments().size()==1)getSupportFragmentManager().popBackStackImmediate();
+        super.onBackPressed();
+    }
+
+    @Override
+    protected void onDestroy() {
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(tabChangeReceiver);
+        super.onDestroy();
     }
 
     public DrawerLayout getDrawerLayout() {
         return drawerLayout;
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener onBottomNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+      private BottomNavigationView.OnNavigationItemSelectedListener onBottomNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             switch (item.getItemId()) {
-
                 case R.id.bottom_nav_home:
                     homeFragment = (HomeFragment) getSupportFragmentManager().findFragmentByTag(HOME_TAG);
                     if (homeFragment != null) {
@@ -148,14 +169,24 @@ public class MainActivity extends AppCompatActivity implements DrawerLayoutAdapt
 
                     }
                     break;
+                case R.id.bottom_nav_fav:
+                    favoriteFragment = (FavoriteFragment) getSupportFragmentManager().findFragmentByTag(FAV_TAG);
+                    if (favoriteFragment != null) {
+                        ft.replace(baseContentId, favoriteFragment);
+                    } else {
+                        favoriteFragment = new FavoriteFragment();
+                        ft.replace(baseContentId, favoriteFragment, FAV_TAG);
 
+                    }
+                    break;
             }
+            ft.addToBackStack(null);
             ft.commit();
             return true;
 
         }
     };
-     private void placeFragment(){
+      private void placeFragment(){
          FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
          if (getSupportFragmentManager().findFragmentById(R.id.content) instanceof HomeFragment) {
              homeFragment = (HomeFragment) getSupportFragmentManager().findFragmentByTag(HOME_TAG);
@@ -204,72 +235,69 @@ public class MainActivity extends AppCompatActivity implements DrawerLayoutAdapt
              homeFragment = new HomeFragment();
              ft.add(baseContentId, homeFragment, HOME_TAG);
          }
+         ft.addToBackStack(null);
          ft.commit();
      }
 
-    @Override
-    public void onItemClicked(int id, boolean on) {
-        if(id==2){
-               CategoryChooserBottomSheet categoryChooserBottomSheet=new CategoryChooserBottomSheet();
-               categoryChooserBottomSheet.show(getSupportFragmentManager(),categoryChooserBottomSheet.getTag());
-               drawerLayout.closeDrawer(Gravity.START);
-        }else if(id==22){
-                TabControlBottomSheet categoryChooserBottomSheet=new TabControlBottomSheet();
-                categoryChooserBottomSheet.show(getSupportFragmentManager(),categoryChooserBottomSheet.getTag());
-                drawerLayout.closeDrawer(Gravity.START);
-        }else if(id==3){
-                SourceDialogFragment sourceDialogFragment=new SourceDialogFragment();
-                sourceDialogFragment.show(getSupportFragmentManager(),sourceDialogFragment.getTag());
-                drawerLayout.closeDrawer(Gravity.START);
-        }else if(id==6){
-            if(on){
-                processTheme("Dark");
-                PreferenceUtility.setAppTheme("Dark");
-            }else{
-                processTheme("default");
-                PreferenceUtility.setAppTheme("default");
+      private NavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener= item -> {
+         switch (item.getItemId()){
+             case R.id.setting_category:
+                 CategoryChooserBottomSheet categoryChooserBottomSheet=new CategoryChooserBottomSheet();
+                 categoryChooserBottomSheet.show(getSupportFragmentManager(),categoryChooserBottomSheet.getTag());
+                 break;
+             case R.id.setting_source:
+                 SourceDialogFragment sourceDialogFragment=new SourceDialogFragment();
+                 sourceDialogFragment.show(getSupportFragmentManager(),sourceDialogFragment.getTag());
+                 break;
+             case R.id.setting_open_news_in_browser:
+                 break;
+             case R.id.setting_dark_theme:
+                 Menu menu=navigationView.getMenu();
+                 CustomSwitchCompat switchCompat=(CustomSwitchCompat) menu.findItem(R.id.setting_dark_theme).getActionView();
+                 switchCompat.updateTheme();
+                 if( PreferenceUtility.getAppTheme().equals("dark")){
+                     switchCompat.setChecked(false);
+                     PreferenceUtility.setAppTheme("default");
+                     PreferenceUtility.setAppMainThemeColor(ContextCompat.getColor(MainActivity.this,R.color.colorAccent));
+                     recreate();
+                 }else{
+                     switchCompat.setChecked(true);
+                     PreferenceUtility.setAppTheme("dark");
+                     PreferenceUtility.setAppMainThemeColor(ContextCompat.getColor(MainActivity.this,R.color.colorAccent));
+                     recreate();
+                 }
+                 break;
+             case R.id.setting_app_language:
+                 break;
+             case R.id.setting_font:
+                 FontChooserBottomSheetDialog fontChooserBottomSheetDialog=new FontChooserBottomSheetDialog();
+                 fontChooserBottomSheetDialog.show(getSupportFragmentManager(),fontChooserBottomSheetDialog.getTag());
+                 break;
+             case R.id.setting_notification:
+                 break;
+             case R.id.setting_image_loading:
+                 break;
+             case R.id.setting_theme:
+                 ColorPickerBottomSheetDialog colorPickerBottomSheetDialog=new ColorPickerBottomSheetDialog();
+                 colorPickerBottomSheetDialog.show(getSupportFragmentManager(),colorPickerBottomSheetDialog.getTag());
+                 break;
+             case R.id.setting_aritcle_view_mode:
+                 ArticleViewModeBottomSheetDialog articleViewModeBottomSheetDialog=new ArticleViewModeBottomSheetDialog();
+                 articleViewModeBottomSheetDialog.show(getSupportFragmentManager(),articleViewModeBottomSheetDialog.getTag());
+                 break;
+             case R.id.settings_article_text_size:
+                 TextsizeChooserBottomSheetDialog textsizeChooserBottomSheetDialog=new TextsizeChooserBottomSheetDialog();
+                 textsizeChooserBottomSheetDialog.show(getSupportFragmentManager(),textsizeChooserBottomSheetDialog.getTag());                 break;
+             case R.id.setting_tab_contorl:
+                 TabControlBottomSheet tabControlBottomSheet=new TabControlBottomSheet();
+                 tabControlBottomSheet.show(getSupportFragmentManager(),tabControlBottomSheet.getTag());
+                 break;
+         }
+         drawerLayout.closeDrawer(Gravity.START);
+         return false;
+     };
 
-            }
-            if(getSupportFragmentManager().findFragmentById(baseContentId) instanceof HomeFragment){
-                if(homeFragment!=null && bottomNavigation!=null && sideNavview!=null && adapter!=null){
-                    Theme.updateAppTheme();
-                    homeFragment.realodTabItems();
-                    bottomNavigation.updateTheme();
-                    sideNavview.setBackgroundColor(Theme.side_nav_background_color);
-                    if(!sideNavview.isComputingLayout())
-                       adapter.notifyDataSetChanged();
-                }
-            }
 
-
-        }
-     }
-
-
-    private void processTheme(String name) {
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(
-                    new InputStreamReader(getAssets().open( name+ ".theme")));
-            String mLine;
-            while ((mLine = reader.readLine()) != null) {
-                String[] val=mLine.trim().split("=");
-                if(val.length==2){
-                    Theme.setSingleTheme("key_" + val[0], Color.parseColor(val[1].replace("0x","#")));
-                }
-            }
-        } catch (IOException e) {
-            FileLog.write(e.toString());
-        } finally {
-            if (reader != null) {
-                try {
-                    reader.close();
-                } catch (IOException e) {
-                   FileLog.write(e.toString());
-                }
-            }
-        }
-    }
 
     @Override
     public void tabchanged() {
@@ -277,6 +305,24 @@ public class MainActivity extends AppCompatActivity implements DrawerLayoutAdapt
              homeFragment=(HomeFragment)getSupportFragmentManager().findFragmentById(baseContentId);
              homeFragment.updateTabItems();
          }
+    }
+
+    @Override
+    public void appThemeChanged() {
+        Fragment fragment=getSupportFragmentManager().findFragmentById(baseContentId);
+        if(fragment instanceof HomeFragment){
+            ((HomeFragment) fragment).updateThemeColor();
+            if(bottomNavigation!=null)bottomNavigation.updateTheme();
+        }else if(fragment instanceof LibraryFragment){
+
+
+        }else if(fragment instanceof FavoriteFragment){
+
+
+
+        }else if(fragment instanceof ReadLaterFragment){
+
+        }
     }
 }
 

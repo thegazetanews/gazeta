@@ -1,11 +1,20 @@
 <resources>
 
-    <!--Base application theme with white teme-->
+    <!--white theme-->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
 
+    </style>
+
+    <!--dark theme-->
+    <style name="DarkTheme" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
     </style>
 
     <style name="FullscreenThemeSplash" parent="AppTheme.NoActionBar">
@@ -23,6 +32,8 @@
         <item name="colorPrimaryDark">@color/pure_black</item>
         <item name="colorPrimary">@color/pure_black</item>
     </style>
+
+
     <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
         <item name="tabIndicatorHeight">2dp</item>
         <item name="tabPaddingStart">12dp</item>
@@ -34,16 +45,9 @@
 
     <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/black</item>
         <item name="textAllCaps">true</item>
-        <item name="android:textStyle">bold</item>
-
     </style>
 
-    <style name="MyToolBarTheme" parent="AppTheme.NoActionBar">
-        <item name="android:textColorPrimary">@color/pure_black</item>
-        <item name="android:textColorSecondary">@color/black</item>
-    </style>
 
 </resources>
 

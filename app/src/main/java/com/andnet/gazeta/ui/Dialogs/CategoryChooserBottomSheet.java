@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -22,9 +23,9 @@ import android.widget.Toast;
 import com.andnet.gazeta.Activityies.MainActivity;
 import com.andnet.gazeta.Databases.GazetaDatabase;
 import com.andnet.gazeta.Models.Category;
+import com.andnet.gazeta.PreferenceUtility;
 import com.andnet.gazeta.R;
 import com.andnet.gazeta.ui.Componenet.CustomCheckBox;
-import com.andnet.gazeta.ui.Theme;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -56,6 +57,9 @@ public class CategoryChooserBottomSheet extends BottomSheetDialogFragment{
         super.setupDialog(dialog, style);
         View view=View.inflate(getContext(),R.layout.cat_bottom_sheet,null);
         rv=view.findViewById(R.id.rv);
+        if(PreferenceUtility.getAppTheme().equals("dark")){
+            view.setBackgroundColor(Color.parseColor("#212121"));
+        }
         CataSelectorAdapter cataSelectorAdapter=new CataSelectorAdapter();
         rv.setLayoutManager(new LinearLayoutManager(getContext()));
         rv.setAdapter(cataSelectorAdapter);
@@ -98,19 +102,6 @@ public class CategoryChooserBottomSheet extends BottomSheetDialogFragment{
             TabItemHolder tabItemHolder=(TabItemHolder)holder;
             tabItemHolder.icon.setImageResource(catagories.get(position).getRes());
 
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                tabItemHolder.icon.setImageTintList(ColorStateList.valueOf(Theme.side_nav_item_icon_color));
-            }else{
-                Drawable drawable=tabItemHolder.icon.getDrawable();
-                drawable.setColorFilter(Theme.side_nav_item_icon_color, PorterDuff.Mode.SRC_IN);
-            }
-
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                tabItemHolder.order.setImageTintList(ColorStateList.valueOf(Theme.side_nav_item_icon_color));
-            }else{
-                Drawable drawable=tabItemHolder.order.getDrawable();
-                drawable.setColorFilter(Theme.side_nav_item_icon_color, PorterDuff.Mode.SRC_IN);
-            }
 
             tabItemHolder.check.setText(catagories.get(position).getName());
 
@@ -189,6 +180,24 @@ public class CategoryChooserBottomSheet extends BottomSheetDialogFragment{
                 icon = itemView.findViewById(R.id.image);
                 check = itemView.findViewById(R.id.check);
                 order = itemView.findViewById(R.id.order);
+
+                Drawable drawable=order.getDrawable();
+                if(drawable!=null){
+                    if(PreferenceUtility.getAppTheme().equals("dark")){
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                            drawable.setTint(Color.WHITE);
+                        }else{
+                           drawable.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
+                        }
+                    }else{
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                            drawable.setTint(Color.parseColor("#212121"));
+                        }else{
+                            drawable.setColorFilter(Color.parseColor("#212121"), PorterDuff.Mode.SRC_IN);
+                        }
+                    }
+                }
+
             }
         }
     }

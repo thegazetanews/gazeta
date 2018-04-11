@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="colorPrimary">#D50000</color>
-    <color name="colorPrimaryDark">#D50000</color>
+    <color name="colorPrimary">#FF0288D1</color>
+    <color name="colorPrimaryDark">#FF0288D1</color>
     <color name="windowBackground">#ebebeb</color>
     <color name="cardsBackground">#ffffff</color>
-    <color name="colorAccent">#D50000</color>
+    <color name="colorAccent">#FF0288D1</color>
 
     <color name="white">#ffffff</color>
     <color name="pure_black">#000000</color>
@@ -24,8 +24,8 @@
     <color name="colorBottomNavigationNotification">#F63D2B</color>
 
     <color name="backgroundSelector">#20ffffff</color>
-    <color name="checkColor">#0288D1</color>
-
+    <color name="checkColor">#0288d1</color>
+    <color name="accent_material_dark_1">#4070ff</color>
 
 
 </resources>

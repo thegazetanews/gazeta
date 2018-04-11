@@ -1,7 +1,6 @@
 package com.andnet.gazeta;
 import android.app.Application;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Handler;
 
 import com.andnet.gazeta.Helper.LocaleHelper;
@@ -19,15 +18,11 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
         applicationContext = getApplicationContext();
-        Theme.updateAppTheme();
+        Theme.ThemeInfo.addThemesInfo();
         applicationHandler = new Handler(applicationContext.getMainLooper());
         Fresco.initialize(applicationContext);
         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
-        SharedPreferences firsttime=applicationContext.getSharedPreferences("first_time_load",MODE_PRIVATE);
-        if(firsttime.getBoolean("first_time",true)){
-            Theme.writeThemeInfoToFile();
-            firsttime.edit().putBoolean("first_time",false).commit();
-        }
+
     }
 
     @Override
